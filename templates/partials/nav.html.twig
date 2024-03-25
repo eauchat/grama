@@ -1,0 +1,38 @@
+{% set navbar_position = theme_var("navbar-position") %}
+{% set navbar_separator = theme_var("navbar-separator") %}
+
+{#-------------------------------------------------------------------------------------------------------#}
+{#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
+{#-------------------------------------------------------------------------------------------------------#}
+{#                                 CONTENT                                                               #}
+{#-------------------------------------------------------------------------------------------------------#}
+
+<div class="mtp-nav mtp-nav_{{ navbar_position }}">
+
+  {# pages #}
+  <ul class="mtp-nav--pageslist">
+    {% for page in pages.children.visible %}
+        {% set current_page = (page.active or page.activeChild) ? "mtp-nav--current" : "" %}
+
+        <a class="{{ current_page }}" href="{{ page.url }}">
+          {%- if page.header.icon %}<i class="fa fa-{{ page.header.icon }}"></i>{% endif -%}
+          {{- page.menu -}}
+        </a>
+
+        {% if loop.last == false %}<span class="mtp-nav--navbar_separator">{{ navbar_separator|raw }}</span>{% endif %}
+
+    {% endfor %}
+  </ul>
+
+  {# language switcher from plugin #}
+  {% if config.plugins.langswitcher.enabled %}
+    {% include "partials/langswitcher.html.twig" %}
+  {% endif %}
+
+  {# post title (useful in post page) #}
+  <span class="mtp-nav--post_title">{{ page.header.title|raw }}</span>
+
+</div>
+
+{#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
+{#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}

@@ -1,0 +1,19 @@
+
+<ul class="mtp-authors_avatars">
+  {% for author in authors %}
+    <li class="mtp-authors_avatars--avatar {% if hover %}mtp-authors_avatars--hoverable{% endif %}">
+
+      {# GET AUTHOR PAGE #}
+      {% set author_page = page.find("/authors/" ~ author) %}
+
+      {# AUTHOR CARD #}
+      {% include "partials/author_card.html.twig" with { author: author, author_page: author_page } %}
+
+      {# PROFILE IMAGE OR DEFAULT PROFILE LOGO #}
+      <a href="{{ author_page.url }}">
+        {% include "partials/author_avatar.html.twig" with { author_page: author_page } %}
+      </a>
+
+    </li>
+  {% endfor %}
+</ul>

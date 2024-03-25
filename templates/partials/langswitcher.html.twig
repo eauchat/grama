@@ -1,0 +1,17 @@
+{% extends "partials/langswitcher-logic.html.twig" %}
+
+{% block language_block_start %}
+<ul class="mtp-langswitcher">
+{% endblock %}
+
+{% block language_block_end %}
+</ul>
+{% endblock %}
+
+{% set navbar_separator = theme_var("navbar-separator") %}
+{% block language_item %}
+    {% if show_language %}
+      <a href="{{ lang_url ~ uri.params ~ (uri.query|length > 1 ? '?' ~ uri.query) }}" class="{{ active_class }}">{% include 'partials/langswitcher-' ~ display_format ~ '.html.twig' %}</a>
+      {%- if loop.last == false %}<span class="mtp-nav--navbar_separator">{{ navbar_separator|raw }}</span>{% endif -%}
+    {% endif %}
+{% endblock %}

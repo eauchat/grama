@@ -1,0 +1,12 @@
+
+<div
+  class="mtp-gallery {{ class }}"
+  style="
+    {% if page.header.images_min_width %} grid-template-columns: repeat(auto-fit, minmax({{ page.header.images_min_width }}, 1fr)); {% endif %}
+    {% if page.header.gap_width %} gap: {{ page.header.gap_width }}; {% endif %}
+  "
+>
+  {% for image in images %}
+    {{ image.lightbox().cropZoom(200,200).html(image.basename)|raw }}
+  {% endfor %}
+</div>

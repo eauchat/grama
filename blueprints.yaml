@@ -1,0 +1,50 @@
+name: Magrav
+version: 0.1.0
+description: A simple multilingual grav theme that doesn't use any external service and resources from GAFAM or elsewhere
+icon: space-shuttle
+author:
+  name: Squeak
+  email: squeak@eauchat.org
+  url: https://squeak.eauchat.org
+homepage: https://framagit.org/squeak/magrav
+keywords: magrav, theme, maghost, modern, fast, responsive, html5, css3
+bugs: https://framagit.org/squeak/magrav/-/issues
+license: AGPL
+
+dependencies:
+  - { name: grav, version: '>=1.5.10' }
+
+form:
+  validation: loose
+  fields:
+    navbar-position:
+      type: select
+      label: Menu position
+      help: Whether to display menu bar on top or bottom
+      size: small
+      default: bottom
+      options:
+        top: Top
+        bottom: Bottom
+    navbar-separator:
+      type: text
+      label: Menu bar titles separator
+      help: The character to use as separator between menu items
+      size: medium
+      default: /
+    sides:
+      type: select
+      label: Sides to display
+      help: Whether to display the side bars on both side, only left, or only right
+      size: small
+      default: both
+      options:
+        both: Both
+        left: Left
+        right: Right
+    header-title_class:
+      type: text
+      label: Header title class
+      help: Additional classes to add to the header's title
+      size: medium
+      default: ""

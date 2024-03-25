@@ -1,0 +1,22 @@
+
+<div class="mtp-author_card">
+
+  {# PROFILE IMAGE #}
+  {% set profile_image = author_page.media["profile_image.jpg"] %}
+  {% if profile_image %}
+    <img class="mtp-author_card--profile_image" src="{{ profile_image.url }}" alt="{{ author }}" />
+  {% endif %}
+
+  {# AUTHOR AVATAR #}
+  {% include "partials/author_avatar.html.twig" with { author_page: author_page } %}
+
+  {# PROFILE INFOS #}
+  <div class="mtp-author_card--info">
+    <div class="info-name">{{ author }}</div>
+    <div class="info-text">{{ author_page.content|safe_truncate(200)|raw }}</div>
+    <div class="info-more_posts">
+      {{ "AUTHOR_CARD.READ_MORE_POSTS_BY_THIS_AUTHOR" | t('<a href="' ~ author_page.url ~ '">', '</a>') | raw }}
+    </div>
+  </div>
+
+</div>

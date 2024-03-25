@@ -1,0 +1,56 @@
+en:
+  MG:
+    POSTS: posts
+  AUTHOR:
+    WEBSITE: "website"
+    POSTS_BY_THIS_AUTHOR: "Posts by this author:"
+  TAG:
+    POSTS_WITH_THIS_TAG: "Posts tagged with this category:"
+  ERROR:
+    GO_TO_HOME: "Go to the front page →"
+  AUTHOR_CARD:
+    READ_MORE_POSTS_BY_THIS_AUTHOR: Read %s more posts %s by this author.
+  EVENT_CARD:
+    READ_MORE: read more
+  POST_FOOTER:
+    PREVIOUS_AND_NEXT: "Previous and next posts:"
+    LATEST_WITH_TAG: "Latest posts with tag %s:"
+    SEE_ALL_POSTS_WITH_TAG: "See all %s posts with tag %s"
+
+fr:
+  MG:
+    POSTS: posts
+  AUTHOR:
+    WEBSITE: "site internet"
+    POSTS_BY_THIS_AUTHOR: "Posts de cet auteur:"
+  TAG:
+    POSTS_WITH_THIS_TAG: "Posts dans cette categorie:"
+  ERROR:
+    GO_TO_HOME: "Aller à la page d'accueil →"
+  AUTHOR_CARD:
+    READ_MORE_POSTS_BY_THIS_AUTHOR: Lire %s plus de posts %s par cet auteur.
+  EVENT_CARD:
+    READ_MORE: lire la suite
+  POST_FOOTER:
+    PREVIOUS_AND_NEXT: "Posts précédent et suivant:"
+    LATEST_WITH_TAG: "Derniers posts dans la catégorie %s:"
+    SEE_ALL_POSTS_WITH_TAG: "Voir les %s posts dans la catégorie %s"
+
+it:
+  MG:
+    POSTS: posts
+  AUTHOR:
+    WEBSITE: "sito web"
+    POSTS_BY_THIS_AUTHOR: "Posts di questa autrice:"
+  TAG:
+    POSTS_WITH_THIS_TAG: "Posts in questa categoria:"
+  ERROR:
+    GO_TO_HOME: "Vai alla pagina iniziale →"
+  AUTHOR_CARD:
+    READ_MORE_POSTS_BY_THIS_AUTHOR: "%s Altri post %s di questa autrice."
+  EVENT_CARD:
+    READ_MORE: continua a leggere
+  POST_FOOTER:
+    PREVIOUS_AND_NEXT: "Post precedente e seguente:"
+    LATEST_WITH_TAG: "Post recenti nella categoria %s:"
+    SEE_ALL_POSTS_WITH_TAG: "Vedere tutti %s posts nella categoria %s"

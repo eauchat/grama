@@ -1,0 +1,11 @@
+
+{% set post_image = post.media.images|first %}
+
+{% if post_image %}
+  <a class="mtp-post_card_image" href="{{ post.url }}">
+    <img loading="lazy"
+        src="{{ post_image.cropResize(1200,1200).url }}"
+        alt="{{ post_image.basename }}"
+    />
+  </a>
+{% endif %}

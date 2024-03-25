@@ -1,0 +1,25 @@
+title: Author
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+
+        content:
+          fields:
+
+            media_help_comment:
+              type: section
+              title: 'For the author icon to be set, you should upload an image named either "thumbnail.png", "thumbnail.jpg" or "thumbnail.svg".'
+
+        options:
+          fields:
+
+            magrav_options:
+              fields:
+
+                website:
+                  type: text
+                  label: "Author's website url"
+                  toggleable: true

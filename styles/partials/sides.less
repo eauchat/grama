@@ -1,0 +1,16 @@
+
+:root {
+  /* the space left on each side of the content minus the content margin */
+  --side-width: calc(((100vw - var(--content_width)) / 2) - var(--content_margin_horizontal));
+}
+
+.mtp-side {
+  position: fixed;
+  bottom: 0;
+  height: 100%;
+  width: var(--side-width);
+  img { width: 100%; }
+}
+
+.mtp-side_left { left: 0; }
+.mtp-side_right { right: 0; }

@@ -1,0 +1,23 @@
+title: Home
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        media:
+          type: tab
+          title: Media
+
+          fields:
+            home_media:
+              label: Add media
+              type: pagemedia
+            header.img_title:
+              label: Choose title image
+              type: pagemediaselect
+            header.img_background:
+              label: Choose background
+              type: pagemediaselect

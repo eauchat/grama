@@ -1,0 +1,12 @@
+
+<div class="mtp-tags_list {{ tags_list_class }}">
+  {% for tag in tags %}
+    {% set tag_category = regex_match(tag, "/^[^\\:]+(?=\\:)/u")|first %}
+    <a
+      class="mtp-tags_list--tag"
+      slug="{{ tag }}"
+      href="{{ page.find('/tags/').url ~ '?tag=' ~ tag }}"
+      category="{{ tag_category }}"
+    >{{ tag }}</a>
+  {% endfor %}
+</div>

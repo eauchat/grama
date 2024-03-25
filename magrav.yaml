@@ -1,0 +1,5 @@
+enabled: true
+navbar-position: top
+navbar-separator: /
+sides: both
+header-title_class: ""

@@ -1,0 +1,219 @@
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//                                                  GENERAL AND BODY
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+// MAKE SURE THAT PADDING IS INCLUDED IN BLOCKS HEIGHT
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+// WHEN SELECTING TEXT
+::selection {
+  text-shadow: none;
+  background: var(--primaryTransparent);
+}
+
+// BODY
+body {
+  font-family: var(--basefont), Roboto, Ubuntu, "Open Sans", "Helvetica Neue", sans-serif;
+  background: var(--base);
+  color: var(--baseContrast);
+	margin: 0;
+  overflow-x: hidden;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+  // -moz-font-feature-settings: "liga" on;
+}
+
+// REMOVE MARGIN, BORDERS AND PADDINGS TO ALL ELEMENTS BY DEFAULT
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt,
+dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark,
+audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//                                                  LINKS, PARAGRAPHS, IMAGES, SEPARATORS...
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+// LINKS
+a {
+  cursor: pointer;
+  color: var(--primary);
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}
+
+// PARAGRAPHS
+p { margin: 1em 0; }
+
+// IMAGES
+img {
+  max-width: 100%;
+  display: block;
+}
+
+// HORIZONTAL LINE SEPARATORS
+hr {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 2em 0;
+  padding: 0;
+}
+
+// MEDIAS
+// audio, canvas, iframe, img, svg, video { vertical-align: middle; }
+
+// a:active, a:hover { outline: 0; }
+// b, strong { font-weight: bold; }
+// i, em, dfn { font-style: italic; }
+// small { font-size: 80%; }
+// svg:not(:root) { overflow: hidden; }
+// mark { background-color: #fdffb6; }
+// button, input, optgroup, select, textarea {
+//   margin: 0; /* 3 */
+//   color: inherit; /* 1 */
+//   font: inherit; /* 2 */
+// }
+// button {
+//   overflow: visible;
+//   border: none;
+// }
+// button, select { text-transform: none; }
+// button, html input[type="button"], /* 1 */ input[type="reset"], input[type="submit"] {
+//   cursor: pointer; /* 3 */
+//   -webkit-appearance: button; /* 2 */
+// }
+// button[disabled], html input[disabled] { cursor: default; }
+// input { line-height: normal; }
+// input:focus { outline: none; }
+// textarea { overflow: auto; }
+// textarea { resize: vertical; }
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//                                                  CODE BLOCKS
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+code, kbd, pre, samp { font-family: monospace; }
+p > code { font-size: .8em; }
+pre, p > code {
+  background-color: var(--baseMild);
+  padding: .4em;
+  border-radius: 5px;
+  border: 1px solid var(--baseMilder);
+  overflow-y: auto;
+}
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//                                                  BLOCKQUOTES
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+blockquote {
+  margin: 1em 0;
+  padding: 0 1em;
+  border-left: var(--baseMilder) 0.2em solid;
+  font-style: italic;
+}
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//                                                  TABLES
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+table {
+  display: inline-block;
+  margin: 0.5em 0 2.5em;
+  width: auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+  vertical-align: top;
+  overflow-x: auto;
+  max-width: 100%;
+  // could use this if wanted table with scroll instead of line wraps:
+  // white-space: nowrap;
+
+  th {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  th, td {
+    padding: .5em 1em;
+    border: var(--baseContrastMilder) 1px solid;
+  }
+
+}
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//                                                  H BLOCKS
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  margin: 1.5em 0 0.5em 0;
+  font-family: Lato-Bold;
+}
+h1, h2 { font-weight: 900; }
+h3, h4 { font-weight: 500; }
+h5, h6 { font-weight: 300; }
+
+h1 {
+  margin: 0 0 0.5em 0;
+  font-size: 2.5em;
+}
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1.1em; }
+
+@media (max-width: 500px) {
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.6em; }
+  h3 { font-size: 1.5em; }
+}
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//                                                  BASIC STYLING ELEMENTS
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+.centered { text-align: center; }
+.centered_image { margin: 0 auto; }
+.hidden { display: none; }
+
+.image_subtitle {
+	display: block;
+	font-size: 0.9em;
+	text-align: center;
+	color: var(--baseContrastMild);
+}
+
+.tag-button {
+  border: 2px solid;
+  border-color: var(--baseContrastMilder);
+  padding: .3em .7em .5em;
+  border-radius: 1.2em;
+  margin: 0 .3em;
+  display: inline-block;
+  margin: .1em 0;
+  &:hover {
+    text-decoration: none;
+    background-color: var(--hover) !important;
+    color: var(--hoverContrast) !important;
+  }
+}
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/

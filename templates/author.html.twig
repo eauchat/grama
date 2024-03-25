@@ -1,0 +1,53 @@
+{% extends "partials/base.html.twig" %}
+
+{% set author_posts = taxonomy.findTaxonomy({ "authors": page.slug }).order("header.date", "desc") %}
+
+{% block main %}
+  {#-------------------------------------------------------------------------------------------------------#}
+  {#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
+  {#-------------------------------------------------------------------------------------------------------#}
+  {#                                 HEADER                                                                #}
+  {#-------------------------------------------------------------------------------------------------------#}
+
+  {% embed "partials/header_with_image.html.twig" with {
+    header_image: page.media.images["profile_image.jpg"],
+    header_text: page.content,
+  } %}
+
+    {% block header_titlebar %}
+      {# AUTHOR AVATAR #}
+      {% include "partials/author_avatar.html.twig" with { author_page: page } %}
+      {# AUTHOR NAME AND WEBSITE #}
+      <div class="mat-author--header_title_text">
+        <h1>{{ (page.header.title ?: page.slug)|raw }}</h1>
+        {% if page.header.website %}
+          <a href="{{ page.header.website }}">{{ "AUTHOR.WEBSITE"|t }}</a>
+        {% endif %}
+        <div>{{ author_posts|length }} {{ "MG.POSTS"|t }}</div>
+      </div>
+    {% endblock %}
+
+  {% endembed %}
+
+	{#-------------------------------------------------------------------------------------------------------#}
+	{#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
+	{#-------------------------------------------------------------------------------------------------------#}
+	{#                                 FEED                                                                  #}
+	{#-------------------------------------------------------------------------------------------------------#}
+
+  <div class="magrav-content">
+
+    <h2>{{ "AUTHOR.POSTS_BY_THIS_AUTHOR"|t }}</h2>
+
+    {# FEED OF POSTS BY THIS AUTHOR #}
+    <div class="magrav-feed">
+      {% for p in author_posts %}
+        {% include "partials/post_card.html.twig" with { post: p } %}
+      {% endfor %}
+    </div>
+
+  </div>
+
+	{#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
+	{#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
+{% endblock %}

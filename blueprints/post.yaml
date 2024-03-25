@@ -1,0 +1,26 @@
+title: Post
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+
+        options:
+          fields:
+
+            magrav_options:
+              fields:
+                header.hide_additional_images_gallery:
+                  type: toggle
+                  toggleable: true
+                  label: Additional images gallery
+                  help: When false (default behaviour), if your post has more than one image, additional images will automatically be displayed at it's bottom as a gallery. If true this won't happen.
+                  highlight: 1
+                  size: medium
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
+                  default: false

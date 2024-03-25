@@ -1,0 +1,75 @@
+{% set primary_tag = post.header.taxonomy.tags|first %}
+{% set primary_tag_url = page.find("/tags/").url ~'?tag='~ primary_tag %}
+{% set related_posts_collection = taxonomy.findTaxonomy({ "tags": primary_tag }) %}
+{% set collection = post.parent.children %}
+
+{% if related_posts_collection|length or not (collection.isFirst(post.path) and collection.isLast(post.path)) %}
+  <div class="mtp-post_footer magrav-footer">
+    {#-------------------------------------------------------------------------------------------------------#}
+    {#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
+    {#-------------------------------------------------------------------------------------------------------#}
+    {#                                 PREVIOUS AND NEXT POSTS (by publishing date)                          #}
+    {#-------------------------------------------------------------------------------------------------------#}
+
+    {% if not (post.isFirst and post.isLast) %}
+      <div class="mtp-post_footer--previous_and_next">
+
+        <span class="mtp-post_footer--title">{{ "POST_FOOTER.PREVIOUS_AND_NEXT"|t }}</span>
+        <div class="mtp-post_footer--previous_and_next-posts">
+          {% if not collection.isFirst(post.path) %}
+            {% include "partials/post_card.html.twig" with { post: collection.nextSibling(post.path) } %}
+          {% endif %}
+          {% if not collection.isLast(post.path) %}
+            {% include "partials/post_card.html.twig" with { post: collection.prevSibling(post.path) } %}
+          {% endif %}
+        </div>
+
+      </div>
+    {% endif %}
+
+    {#-------------------------------------------------------------------------------------------------------#}
+    {#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
+    {#-------------------------------------------------------------------------------------------------------#}
+    {#                                 RELATED POSTS (= having same tag)                                     #}
+    {#-------------------------------------------------------------------------------------------------------#}
+
+    {% if related_posts_collection|length %}
+
+      {# CREATE A CARD LISTING RELATED POSTS #}
+      <div class="mtp-post_footer--more_with_this_tag">
+
+        {# CARD HEADER #}
+        <div class="mtp-post_footer--title">
+          {{ "POST_FOOTER.LATEST_WITH_TAG"|t('<a href="'~ primary_tag_url ~'">'~ primary_tag ~'</a>')|raw }}
+        </div>
+
+        {# CARD CONTENT (= list of three related posts) #}
+        <div class="mtp-post_footer--more_with_this_tag-posts">
+          {% for related_post in related_posts_collection|slice(0, 3) %}
+            <div class="mtp-post_footer--related">
+              <a class="related-title" href="{{ related_post.url }}">{{ related_post.title }}</a>
+              <div class="related-meta">
+                {# POST DATE #}
+                <time class="date" datetime="{{ related_post.header.date|date(system.pages.dateformat.short) }}">{{ related_post.header.date|date(system.pages.dateformat.short) }}</time>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        {# CARD FOOTER (= more posts clickable link) #}
+        <div class="mtp-post_footer--more_with_this_tag-button">
+          <a href="{{ primary_tag_url }}">
+            {{ "POST_FOOTER.SEE_ALL_POSTS_WITH_TAG"|t(related_posts_collection|length, primary_tag) }}
+          </a>
+        </div>
+
+        {# ----------------------------------------- #}
+
+      </div>
+
+    {% endif %}
+
+    {#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
+    {#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
+  </div>
+{% endif %}

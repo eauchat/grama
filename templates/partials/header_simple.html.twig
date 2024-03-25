@@ -1,0 +1,13 @@
+
+{% if not page.header.hide_header %}
+
+  <div class="mtp-header_simple magrav-header {{ theme_var("header-title_class") }} {{ page.header.title_class }}" {% if no_border or page.header.header_no_border %}style="border-bottom: none;"{% endif %}>
+    {% if not page.header.hide_title %}
+      <h1>{{ page.header.title|raw }}</h1>
+    {% endif %}
+    {% if not no_intro %}
+      <div class="magrav-header-intro">{{ page.content|raw }}</div>
+    {% endif %}
+  </div>
+
+{% endif %}

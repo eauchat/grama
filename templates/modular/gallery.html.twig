@@ -1,0 +1,10 @@
+
+<div class="mtm-gallery">
+
+  <div class="mtm-gallery--intro">
+    {{ content|raw }}
+  </div>
+
+  {% include "partials/gallery.html.twig" with { images: page.media.images } %}
+
+</div>

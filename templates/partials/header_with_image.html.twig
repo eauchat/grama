@@ -1,0 +1,18 @@
+
+<div class="mtp-header_with_image magrav-header">
+
+  {# HEADER IMAGE AND TITLE BAR #}
+  <div class="mtp-header_with_image--head" style="background-image: url('{{ header_image.cropZoom(1000,500).url }}');">
+    <div class="mtp-header_with_image--head-bar">
+      {% block header_titlebar %}
+        <h1>{{ header_title|raw }}</h1>
+      {% endblock %}
+    </div>
+  </div>
+
+  {# HEADER TEXT #}
+  {% if header_text %}
+    <div class="mtp-header_with_image--text">{{ header_text|raw }}</div>
+  {% endif %}
+
+</div>

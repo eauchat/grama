@@ -1,0 +1,97 @@
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//                                                  FONTS
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+@font-face {
+  font-family: "Lato-Light";
+  src: url(../font/Lato-Light.ttf);
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../font/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Lato-Bold";
+  src: url(../font/Lato-Bold.ttf);
+}
+
+@font-face {
+  font-family: "ZillaSlab-Regular";
+  src: url(../font/ZillaSlab-Regular.otf);
+}
+
+@font-face {
+  font-family: "ZillaSlab-Bold";
+  src: url(../font/ZillaSlab-Bold.otf);
+}
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//                                                  VARIABLES
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+:root {
+
+  // --base is the default color of backgrounds
+  // --baseContrast will be applied to texts having --base background
+  --base: #FFFFFF;
+  --baseMild: #EEEEEE;
+  --baseMilder: #DDDDDD;
+  --baseTransparent: #FFFFFF88;
+  --baseTransparentMore: #FFFFFF33;
+  --baseTransparentLess: #FFFFFFCC;
+  --baseContrast: #000000;
+  --baseContrastMild: #AAA;
+  --baseContrastMilder: #DDD;
+  --baseContrastTransparent: #00000033;
+  // to make a dark theme, it's as easy as changing the base variables, like this for example:
+  // --base: #000000;
+  // --baseTransparent: #00000088;
+  // --baseTransparentMore: #00000033;
+  // --baseTransparentLess: #000000CC;
+  // --baseContrast: #FFFFFF;
+  // --baseContrastTransparent: #FFFFFF55;
+  // ...
+
+  // --primary is the color of buttons, and al elements you want to be nicely contrasted with base in page
+  // --primaryContrast will be applied to texts having --primary background
+  --primary: #26a6ed; // should have fare contrast with --base
+  --primaryTransparent: #26a6ed88;
+  --primaryTransparentMore: #26a6ed33;
+  --primaryTransparentLess: #26a6edCC;
+  --primaryContrast: black;
+
+  // --hover is the color that will be applied to an element that is interractive when you hover over it
+  // --hoverContrast will be applied to texts having --hover background
+  --hover: #AAA; // should have fare contrast with --base
+  --hoverContrast: white;
+
+  // fonts
+  --basefont: Lato; // -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --basefontLight: Lato-Light;
+  --basefontBold: Lato-Bold;
+  // --textfont: Georgia;
+  // --textfontBold: Georgia-Bold;
+  --textfont: ZillaSlab-Regular;
+  --textfontBold: ZillaSlab-Bold;
+
+  // scroll bar dimension
+  --scrollBar: 12px;
+
+  // content dimensions (the width of pages and posts text and image contents)
+  --content_width: 50vw;
+  --content_margin_horizontal: 2rem;
+  --content_margin_vertical: 1rem;
+
+}
+
+// custom content dimensions depending on device
+@media (any-pointer:none), (any-pointer:coarse), (max-width: 700px) { :root { --content_width: 60vw; } }
+@media (any-pointer:none), (any-pointer:coarse), (max-width: 600px) { :root { --content_width: 90vw; } }
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/

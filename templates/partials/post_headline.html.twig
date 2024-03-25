@@ -1,0 +1,26 @@
+
+{# POST AUTHORS CARD #}
+<div class="mtp-post_headline">
+
+  {# AUTHORS PROFILE IMAGES #}
+  {% if withoutAuthorCard %}
+    {% include "partials/authors_avatars.html.twig" with { authors: post.header.taxonomy.authors ?: [config.site.author.name], post: post } %}
+  {% else %}
+    {% include "partials/authors_avatars.html.twig" with { authors: post.header.taxonomy.authors ?: [config.site.author.name], post: post, hover: true } %}
+  {% endif %}
+
+  {# CARD CONTENT #}
+  <div class="content">
+    <div class="authors">{{ (post.header.taxonomy.authors ?: [config.site.author.name])|join(", ")|raw }}</div>
+    <div class="details">
+      {# POST DATE #}
+      <time class="date" datetime="{{ post.header.date|date(system.pages.dateformat.short) }}">{{ post.header.date|date(system.pages.dateformat.short) }}</time>
+    </div>
+  </div>
+
+  {# POST TAGS #}
+  {% if tags %}
+    {% include "partials/tags_list.html.twig" with { tags : tags, tags_list_class: "mtp-post_headline--tags_list" } %}
+  {% endif %}
+
+</div>
