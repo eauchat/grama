@@ -16,7 +16,7 @@
   {#-------------------------------------------------------------------------------------------------------#}
 
   <div class="magrav-content">
-    {% for module in page.collection() %}
+    {% for module in page.children() %}
       <div class="mat-modular--module">
         {{ module.content|raw }}
       </div>
