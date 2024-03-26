@@ -1,10 +1,5 @@
 
 <div class="mtm-gallery">
-
-  <div class="mtm-gallery--intro">
-    {{ content|raw }}
-  </div>
-
+  {% include "partials/header_simple.html.twig" with { no_border: true } %}
   {% include "partials/gallery.html.twig" with { images: page.media.images } %}
-
 </div>
