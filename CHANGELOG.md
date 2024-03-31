@@ -9,6 +9,15 @@
     * Added plugins checks for improved flexibility if plugins are not installed -->
 
 
+# v0.1.1
+## 2023-03-31
+
+1. [](#new)
+    * Made modular page automatically list children pages
+    * Created blueprint for page template modular
+    * Made modular gallery use default header template for it's header
+    * Added wiki folder explaining how to use and develop magrav
+
 # v0.1.0
 ## 2023-03-25
 
