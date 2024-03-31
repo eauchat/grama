@@ -96,6 +96,19 @@ form:
                   validate:
                     type: bool
                   default: false
+                header.hide_title:
+                  type: toggle
+                  toggleable: true
+                  label: Hide title
+                  help: If true, will hide the page title in page header
+                  highlight: 1
+                  size: medium
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
+                  default: false
                 header.header_no_border:
                   type: toggle
                   toggleable: true
