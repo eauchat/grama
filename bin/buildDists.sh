@@ -1,8 +1,19 @@
 #!/bin/bash
 
-# make sure to be in theme dir
+# COLORS
+RED='\033[1;31m'
+GREEN='\033[1;32m'
+NC='\033[0m' # No Color
+
+# MAKE SURE TO BE IN THEME DIR
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 cd "$SCRIPT_DIR/../"
+
+# MAKE SURE LESSC DEPENDENCY IS INSTALLED
+lessc --help &> /dev/null || {
+  echo -e "${RED}[magrav] Cannot build styles and scripts, missing lessc dependency! (for install instructions see on https://lesscss.org)${NC}"
+  exit 1
+}
 
 # make sure target built folder exists
 mkdir -p "assets/built"
@@ -24,11 +35,8 @@ cat ./scripts/lib/*.js > assets/built/libraries.js
 find ./scripts/modular ./scripts/partials -type f -name "*.js" -exec cat {} \; > assets/built/general.js
 
 # ECHO RESULT
-RED='\033[0;31m'
-GREEN='\033[1;32m'
-NC='\033[0m' # No Color
 if [ $? -ne 0 ]; then
-  echo -e "${RED}Error building styles and scripts!${NC}"
+  echo -e "${RED}[magrav] Error building styles and scripts!${NC}"
 else
-  echo -e "${GREEN}Successfully built styles and scripts!${NC}"
+  echo -e "${GREEN}[magrav] Successfully built styles and scripts!${NC}"
 fi
