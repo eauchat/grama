@@ -9,6 +9,12 @@
     * Added plugins checks for improved flexibility if plugins are not installed -->
 
 
+# v0.1.3
+## 2023-04-01
+
+1. [](#improved)
+    * Make buildDist script log a nice error message if missing lessc dependency
+
 # v0.1.2
 ## 2023-04-01
 
