@@ -9,6 +9,12 @@
     * Added plugins checks for improved flexibility if plugins are not installed -->
 
 
+# v0.1.2
+## 2023-04-01
+
+1. [](#improved)
+    * Merged whole wiki folder into README file
+
 # v0.1.1
 ## 2023-03-31
 
