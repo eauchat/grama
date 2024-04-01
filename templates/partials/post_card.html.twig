@@ -25,7 +25,7 @@
       {% set post_image = post.media.images|first %}
       {% if not post_image %}
         <div class="content-link-excerpt">
-          <p>{{ post.content|raw|striptags|safe_truncate(200)  }}</p>
+          <p>{{ post.content|raw|striptags|safe_truncate(200)|raw  }}</p>
         </div>
       {% endif %}
 

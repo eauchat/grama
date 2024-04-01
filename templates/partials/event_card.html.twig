@@ -13,7 +13,7 @@
     <div class="event-date">{{ post.header.date|date(system.pages.dateformat.short) }} · {{ post.header.place }}</div>
     {# CONTENT #}
     <div class="event-content">
-      <p>{{ post.content|raw|striptags|safe_truncate(500)  }}...</p>
+      <p>{{ post.content|raw|striptags|safe_truncate(500)|raw  }}</p>
     </div>
     {# READ MORE #}
     <a class="event-read_more" href="{{ post.url }}">{{ "EVENT_CARD.READ_MORE"|t }}</a>
