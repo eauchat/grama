@@ -9,6 +9,12 @@
     * Added plugins checks for improved flexibility if plugins are not installed -->
 
 
+# v0.1.4
+## 2023-04-01
+
+1. [](#fix)
+    * Fixed misuse of safe_truncate in post and event cards.
+
 # v0.1.3
 ## 2023-04-01
 
