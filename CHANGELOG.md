@@ -3,16 +3,21 @@
 ## 2056-07-29
 
 1. [](#new)
-    * Added SimpleSearch display in blog sidebar
-    * Added reference to `custom.css` file in core
-1. [](#improved)
-    * Added plugins checks for improved flexibility if plugins are not installed -->
+    * New features added
+    * Another new feature
+2. [](#improved)
+    * Improvement made
+    * Another improvement
+3. [](#bugfix)
+     * Bugfix implemented
+     * Another bugfix -->
+
 
 
 # v0.1.4
 ## 2023-04-01
 
-1. [](#fix)
+1. [](#bugfix)
     * Fixed misuse of safe_truncate in post and event cards.
 
 # v0.1.3
