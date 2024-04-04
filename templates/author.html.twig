@@ -14,6 +14,7 @@
       (not p.header.taxonomy.authors|length)
       or (config.site.author.name in p.header.taxonomy.authors)
     )
+    |reverse
   %}
 {# ELSE GET ALL POSTS/PAGES HAVING AUTHOR NAME IN TAXONOMY #}
 {% else %}
