@@ -1,6 +1,27 @@
 {% extends "partials/base.html.twig" %}
 
-{% set author_posts = taxonomy.findTaxonomy({ "authors": page.slug }).order("header.date", "desc") %}
+{#-------------------------------------------------------------------------------------------------------#}
+{#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
+{#-------------------------------------------------------------------------------------------------------#}
+{#                                 FIGURE OUT LIST OF POSTS TO DISPLAY                                   #}
+{#-------------------------------------------------------------------------------------------------------#}
+
+{# NO-AUTHOR OR AUTHOR-IS-SITE-AUTHOR: GET ALL POSTS WITHOUT AUTHOR OR WITH AUTHOR BEING SITE OWNER #}
+{% if not author or author == config.site.author.name %}
+  {% set author_posts = pages.collection({ items: "@root.descendants" })
+    |filter(p => p.template == "post")
+    |filter(p =>
+      (not p.header.taxonomy.authors|length)
+      or (config.site.author.name in p.header.taxonomy.authors)
+    )
+  %}
+{# ELSE GET ALL POSTS/PAGES HAVING AUTHOR NAME IN TAXONOMY #}
+{% else %}
+  {% set author_posts = taxonomy.findTaxonomy({ "authors": page.slug }).order("header.date", "desc") %}
+{% endif %}
+
+{#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
+{#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
 
 {% block main %}
   {#-------------------------------------------------------------------------------------------------------#}
