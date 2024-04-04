@@ -14,7 +14,7 @@ form:
                 header.hide_additional_images_gallery:
                   type: toggle
                   toggleable: true
-                  label: Additional images gallery
+                  label: Hide additional images gallery
                   help: When false (default behaviour), if your post has more than one image, additional images will automatically be displayed at it's bottom as a gallery. If true this won't happen.
                   highlight: 1
                   size: medium
