@@ -25,12 +25,14 @@ To make the best of magrav, it may be of some help to read the following section
 #### Global options
 The following table lists the available global options magrav proposes:
 
-| variable name      | type   | default value | possible values         | explanation                                  |
-| ------------------ | ------ | ------------- | ----------------------- | -------------------------------------------- |
-| navbar-position    | string | "bottom"      | "bottom", "top"         | whether to display menu bar on top or bottom |
-| navbar-separator   | string | "/"           | any string              | the character to use as separator between menu items |
-| sides              | string | "both"        | "both", "left", "right" | whether to display the side bars on both side, only left, or only right |
-| header-title_class | string | ""            | any string              | additional classes to add to the header's title |
+| variable name         | type   | default value | possible values   | explanation                                  |
+| --------------------- | ------ | ------------- | ----------------- | -------------------------------------------- |
+| navbar-position       | string | "bottom"      | "bottom", "top"   | whether to display menu bar on top or bottom |
+| navbar-separator      | string | "/"           | any string        | the character to use as separator between menu items |
+| sides                 | string | "both"        | "both", "left", "right", "none" | whether to display the side bars on both side, only left, or only right |
+| header-title_class    | string | ""            | any string        | additional classes to add to the header's title |
+| hide_author_headlines | boolean | false        | true, false, null | whether to display author name and thumbnail in post cards and pages |
+| hide_image_gallery_in_posts | boolean | false  | true, false, null | whether to display image galleries at end of posts |
 
 #### Customize site colors, content width...
 To customize the colors to use in the site, you can use the "Custom CSS" plugin.
@@ -84,7 +86,7 @@ The `gallery`, `gallery_raw` templates and `gallery` modular all allow you to di
 
 The `modular` template let's you put up a page with modular pieces. Your subpages should start with an underscore.
 
-The `post` template is used for blogposts. The first image of a post will be used as default image. Any other images you add will be displayed as a gallery at the end of your post's text. If you want to disable this behaviour, for example to introduce your images by yourself in your post content, set the `hide_additional_images_gallery` header to `true`.
+The `post` template is used for blogposts. The first image of a post will be used as default image. Any other images you add will be displayed as a gallery at the end of your post's text. If you want to disable this behaviour, for example to introduce your images by yourself in your post content, set the `hide_image_gallery_in_posts` header to `true`. The `hide_header_image` option allows you to prevent from displaying an image in the post header and post card. And the `hide_author_headlines` option allows to prevent from displaying the author name and thumbnail (this option can also be used in blog, author and tag templates).
 
 Last but not least, the `default` template displays very simply your page content with it's title as header. You may set the following headers: `hide_header`, `hide_title` and `header_no_border` to true if you want to hide the whole title header, only the title, or hide the grey line at the header's bottom. Those three options can also be used in all other templates.
 
