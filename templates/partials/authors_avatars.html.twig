@@ -6,13 +6,21 @@
       {# GET AUTHOR PAGE #}
       {% set author_page = page.find("/authors/" ~ author) %}
 
-      {# AUTHOR CARD #}
-      {% include "partials/author_card.html.twig" with { author: author, author_page: author_page } %}
+      {# IF NO AUTHOR PAGE, JUST DISPLAY DEFAULT THUMBNAIL #}
+      {% if not author_page %}
+        {% include "partials/author_avatar.html.twig" %}
+      {# IF AUTHOR PAGE, DISPLAY AUTHOR CARD AND CLICKABLE THUMBNAIL #}
+      {% else %}
 
-      {# PROFILE IMAGE OR DEFAULT PROFILE LOGO #}
-      <a href="{{ author_page.url }}">
-        {% include "partials/author_avatar.html.twig" with { author_page: author_page } %}
-      </a>
+        {# AUTHOR CARD #}
+        {% include "partials/author_card.html.twig" with { author: author, author_page: author_page } %}
+
+        {# PROFILE IMAGE OR DEFAULT PROFILE LOGO #}
+        <a href="{{ author_page.url }}">
+          {% include "partials/author_avatar.html.twig" with { author_page: author_page } %}
+        </a>
+
+      {% endif %}
 
     </li>
   {% endfor %}
