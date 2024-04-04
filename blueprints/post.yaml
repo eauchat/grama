@@ -24,6 +24,19 @@ form:
                   validate:
                     type: bool
                   default: false
+                header.hide_header_image:
+                  type: toggle
+                  toggleable: true
+                  label: Hide header image
+                  help: Hide main post image in post header and card
+                  highlight: 1
+                  size: medium
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
+                  default: false
                 header.hide_author_headlines:
                   type: toggle
                   toggleable: true

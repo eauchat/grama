@@ -6,7 +6,9 @@
   {#                                 FEATURE IMAGE                                                         #}
   {#-------------------------------------------------------------------------------------------------------#}
 
-  {% include "partials/post_card_image.html.twig" with { post: post } %}
+  {% if not post.header.hide_header_image %}
+    {% include "partials/post_card_image.html.twig" with { post: post } %}
+  {% endif %}
 
   {#-------------------------------------------------------------------------------------------------------#}
   {#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
@@ -23,7 +25,7 @@
 
       {# EXCERPT (if no image) #}
       {% set post_image = post.media.images|first %}
-      {% if not post_image %}
+      {% if not post_image or post.header.hide_header_image %}
         <div class="content-link-excerpt">
           <p>{{ post.content|raw|striptags|safe_truncate(200)|raw  }}</p>
         </div>
