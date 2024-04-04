@@ -7,7 +7,7 @@
 {#-------------------------------------------------------------------------------------------------------#}
 
 {# NO-AUTHOR OR AUTHOR-IS-SITE-AUTHOR: GET ALL POSTS WITHOUT AUTHOR OR WITH AUTHOR BEING SITE OWNER #}
-{% if not author or author == config.site.author.name %}
+{% if page.slug == config.site.author.name %}
   {% set author_posts = pages.collection({ items: "@root.descendants" })
     |filter(p => p.template == "post")
     |filter(p =>
