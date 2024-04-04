@@ -16,9 +16,7 @@
   {#-------------------------------------------------------------------------------------------------------#}
 
   <div class="magrav-content magrav-feed">
-    {% for p in page.children|reverse %}
-      {% include "partials/post_card.html.twig" with { post: p } %}
-    {% endfor %}
+    {% include "partials/feed.html.twig" with { card_template: "partials/post_card.html.twig", reverse: true } %}
   </div>
 
   {#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}

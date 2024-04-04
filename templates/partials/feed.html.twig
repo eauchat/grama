@@ -1,0 +1,13 @@
+
+{# get page collection (defined in page header) #}
+{% set collection = page.collection %}
+{# if no page collection, make collection from page children #}
+{% if not collection|length %} {% set collection = page.children %} {% endif %}
+
+{# should reverse collection #}
+{% if reverse %} {% set collection = collection|reverse %} {% endif %}
+
+{# iterate collection and create card #}
+{% for p in collection %}
+  {% include card_template with { post: p } %}
+{% endfor %}
