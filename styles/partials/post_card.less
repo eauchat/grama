@@ -9,6 +9,8 @@
   padding: 1em;
   flex: 1 1 301px;
   border-bottom: var(--baseContrastMilder) solid 1px;
+  display: flex;
+  flex-direction: column;
 
   // make sure margins of p are not too big
   p { margin: .4em 0; }
@@ -27,6 +29,7 @@
       position: relative;
       display: block;
       color: var(--baseContrast);
+      flex: 1;
       &:hover { text-decoration: none; }
 
       .content-link-title {
