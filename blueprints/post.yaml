@@ -16,8 +16,6 @@ form:
                   toggleable: true
                   label: Hide additional images gallery
                   help: When false (default behaviour), if your post has more than one image, additional images will automatically be displayed at it's bottom as a gallery. If true this won't happen.
-                  highlight: 1
-                  size: medium
                   options:
                     1: PLUGIN_ADMIN.YES
                     0: PLUGIN_ADMIN.NO
@@ -29,8 +27,6 @@ form:
                   toggleable: true
                   label: Hide header image
                   help: Hide main post image in post header and card
-                  highlight: 1
-                  size: medium
                   options:
                     1: PLUGIN_ADMIN.YES
                     0: PLUGIN_ADMIN.NO
@@ -42,8 +38,6 @@ form:
                   toggleable: true
                   label: Hide author headline
                   help: Whether to display or not author name and thumbnail in header
-                  highlight: 1
-                  size: medium
                   options:
                     1: PLUGIN_ADMIN.YES
                     0: PLUGIN_ADMIN.NO

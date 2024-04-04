@@ -88,8 +88,6 @@ form:
                   toggleable: true
                   label: Hide header
                   help: If true, will hide the page header
-                  highlight: 1
-                  size: medium
                   options:
                     1: PLUGIN_ADMIN.YES
                     0: PLUGIN_ADMIN.NO
@@ -101,8 +99,6 @@ form:
                   toggleable: true
                   label: Hide title
                   help: If true, will hide the page title in page header
-                  highlight: 1
-                  size: medium
                   options:
                     1: PLUGIN_ADMIN.YES
                     0: PLUGIN_ADMIN.NO
@@ -114,8 +110,6 @@ form:
                   toggleable: true
                   label: Remove header border
                   help: If true, will remove the bottom line of the page header
-                  highlight: 1
-                  size: medium
                   options:
                     1: PLUGIN_ADMIN.YES
                     0: PLUGIN_ADMIN.NO
@@ -203,7 +197,6 @@ form:
                   label: PLUGIN_ADMIN.PUBLISHED
                   help: PLUGIN_ADMIN.PUBLISHED_HELP
                   highlight: 1
-                  size: medium
                   options:
                     1: PLUGIN_ADMIN.YES
                     0: PLUGIN_ADMIN.NO
@@ -232,7 +225,6 @@ form:
                 header.dateformat:
                   toggleable: true
                   type: select
-                  size: medium
                   selectize:
                     create: true
                   label: PLUGIN_ADMIN.DEFAULT_DATE_FORMAT
@@ -399,7 +391,6 @@ form:
                   type: array
                   toggleable: true
                   value_only: true
-                  size: large
                   label: PLUGIN_ADMIN.ROUTE_ALIASES
 
 

@@ -21,7 +21,6 @@ form:
       type: select
       label: Menu position
       help: Whether to display menu bar on top or bottom
-      size: small
       default: bottom
       options:
         top: Top
@@ -30,13 +29,11 @@ form:
       type: text
       label: Menu bar titles separator
       help: The character to use as separator between menu items
-      size: medium
       default: /
     sides:
       type: select
       label: Sides to display
       help: Whether to display the side bars on both side, only left, or only right
-      size: small
       default: both
       options:
         both: Both
@@ -47,14 +44,11 @@ form:
       type: text
       label: Header title class
       help: Additional classes to add to the header's title
-      size: medium
       default: ""
     hide_author_headlines:
       type: toggle
       label: Hide author headlines
       help: Whether to display or not author name and thumbnail in post cards and pages
-      highlight: 1
-      size: medium
       options:
         1: PLUGIN_ADMIN.YES
         0: PLUGIN_ADMIN.NO
