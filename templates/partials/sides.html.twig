@@ -8,7 +8,7 @@
 
 {% set sideImagesList = page.find("/images/sides").media.images %}
 
-{% if sides2display != "right" %}
+{% if sides2display == "left" or sides2display == "both" %}
   <div class="mtp-side mtp-side_left">
     {% for sideImage in sideImagesList|randomize %}
         <img src="{{ sideImage.url }}" loading="lazy">
@@ -16,7 +16,7 @@
   </div>
 {% endif %}
 
-{% if sides2display != "left" %}
+{% if sides2display == "right" or sides2display == "both" %}
   <div class="mtp-side mtp-side_right">
     {% for sideImage in sideImagesList|randomize %}
         <img src="{{ sideImage.url }}" loading="lazy">
@@ -30,25 +30,17 @@
 {#                                 STYLES                                                                #}
 {#-------------------------------------------------------------------------------------------------------#}
 
-{% if sides2display == "both" %}
-  <style>
-    .magrav-main {
-      margin-left: var(--side-width);
-    }
-  </style>
-{% elseif sides2display == "left" %}
-  <style>
-    .magrav-main {
+<style>
+  .magrav-main {
+    {% if sides2display == "left" %}
       margin-left: calc(var(--side-width) * 1.5);
-    }
-  </style>
-{% else %}
-  <style>
-    .magrav-main {
+    {% elseif sides2display == "right" %}
       margin-left: calc(var(--side-width) * 0.5);
-    }
-  </style>
-{% endif %}
+    {% else %}
+      margin-left: var(--side-width);
+    {% endif %}
+  }
+</style>
 
 {#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
 {#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
