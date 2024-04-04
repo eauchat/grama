@@ -13,6 +13,20 @@
      * Another bugfix -->
 
 
+# v0.2.0
+## 2023-04-04
+
+1. [](#improved)
+    * Blog, calendar and wiki templates will show list of posts from collection if it's set or will default to children pages.
+    * Author avatars now display card and link only if an author page is available.
+    * Make it possible to disable image galleries in posts globally.
+    * Various minor layout improvements.
+2. [](#new)
+    * Simple header is now automatically hidden if empty.
+    * Site author page now also displays all posts without author.
+    * Added possibility to have no side images.
+    * Added possibility to hide author name and thumbnails from post cards and pages.
+    * Added possibility to hide header image in posts pages and cards.
 
 # v0.1.4
 ## 2023-04-01
