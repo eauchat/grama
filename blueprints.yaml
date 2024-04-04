@@ -55,3 +55,13 @@ form:
       validate:
         type: bool
       default: false
+    hide_image_gallery_in_posts:
+      type: toggle
+      label: Hide additional images gallery in posts
+      help: When false (default behaviour), if posts have more than one image, additional images will automatically be displayed at it's bottom as a gallery. If true this won't happen.
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+      validate:
+        type: bool
+      default: false

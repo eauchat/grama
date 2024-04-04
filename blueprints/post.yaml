@@ -11,7 +11,7 @@ form:
 
             magrav_options:
               fields:
-                header.hide_additional_images_gallery:
+                header.hide_image_gallery_in_posts:
                   type: toggle
                   toggleable: true
                   label: Hide additional images gallery

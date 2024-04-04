@@ -43,7 +43,7 @@
 
 		{# ADD ADDITIONAL IMAGES AS A GALLERY #}
 		{% set additional_images = page.media.images|slice(1) %}
-		{% if (not page.header.hide_additional_images_gallery) and (additional_images|length) %}
+		{% if (not theme_var("hide_image_gallery_in_posts")) and (additional_images|length) %}
 			{% include "partials/gallery.html.twig" with { images: additional_images } %}
 		{% endif %}
 
