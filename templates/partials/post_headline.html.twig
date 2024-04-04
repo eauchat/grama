@@ -1,19 +1,37 @@
 
-{# POST AUTHORS CARD #}
-<div class="mtp-post_headline">
+{#-------------------------------------------------------------------------------------------------------#}
+{#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
+{#-------------------------------------------------------------------------------------------------------#}
+{#                GET hide_author_headlines VALUE FROM PAGE HEADER, PARENTS PAGE HEADER OR THEME         #}
+{#-------------------------------------------------------------------------------------------------------#}
+
+{% set hide_author = theme_var("hide_author_headlines") %}
+
+{#-------------------------------------------------------------------------------------------------------#}
+{#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
+{#-------------------------------------------------------------------------------------------------------#}
+{#                                 DISPLAY POST AUTHORS CARD                                             #}
+{#-------------------------------------------------------------------------------------------------------#}
+
+<div class="mtp-post_headline" {% if hide_author %} style="padding: 0;" {% endif %}>
 
   {# AUTHORS PROFILE IMAGES #}
-  {% if withoutAuthorCard %}
-    {% include "partials/authors_avatars.html.twig" with { authors: post.header.taxonomy.authors ?: [config.site.author.name], post: post } %}
-  {% else %}
-    {% include "partials/authors_avatars.html.twig" with { authors: post.header.taxonomy.authors ?: [config.site.author.name], post: post, hover: true } %}
+  {% if not hide_author == true %}
+    {% include "partials/authors_avatars.html.twig" with {
+      authors: post.header.taxonomy.authors ?: [config.site.author.name],
+      post: post,
+      hover: not withoutAuthorCard,
+    } %}
   {% endif %}
 
-  {# CARD CONTENT #}
-  <div class="content">
-    <div class="authors">{{ (post.header.taxonomy.authors ?: [config.site.author.name])|join(", ")|raw }}</div>
+  {# AUTHORS NAMES AND POST DATE #}
+  <div class="content" {% if hide_author %} style="margin-left: 0;" {% endif %}>
+    {# post authors #}
+    {% if not hide_author == true %}
+      <div class="authors">{{ (post.header.taxonomy.authors ?: [config.site.author.name])|join(", ")|raw }}</div>
+    {% endif %}
+    {# post date #}
     <div class="details">
-      {# POST DATE #}
       <time class="date" datetime="{{ post.header.date|date(system.pages.dateformat.short) }}">{{ post.header.date|date(system.pages.dateformat.short) }}</time>
     </div>
   </div>
@@ -24,3 +42,6 @@
   {% endif %}
 
 </div>
+
+{#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
+{#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}

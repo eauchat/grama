@@ -1,0 +1,26 @@
+title: Feed
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+
+        options:
+          fields:
+
+            magrav_options:
+              fields:
+                header.hide_author_headlines:
+                  type: toggle
+                  toggleable: true
+                  label: Hide author headlines
+                  help: Whether to display or not author name and thumbnail in post cards
+                  highlight: 1
+                  size: medium
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
+                  default: false

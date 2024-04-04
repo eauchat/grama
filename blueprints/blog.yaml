@@ -1,2 +1,2 @@
 title: Blog
-'@extends': default
+'@extends': feed

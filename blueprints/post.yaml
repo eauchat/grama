@@ -24,3 +24,16 @@ form:
                   validate:
                     type: bool
                   default: false
+                header.hide_author_headlines:
+                  type: toggle
+                  toggleable: true
+                  label: Hide author headline
+                  help: Whether to display or not author name and thumbnail in header
+                  highlight: 1
+                  size: medium
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
+                  default: false
