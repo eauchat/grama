@@ -1,7 +1,7 @@
-# magrav
+# grama
 
 
-Magrav is a theme for [the grav CMS](https://getgrav.org/). It allows you to create easily a website and blog that you can simply edit from markdown files or with the grav administrative interface.
+Grama is a theme for [the grav CMS](https://getgrav.org/). It allows you to create easily a website and blog that you can simply edit from markdown files or with the grav administrative interface.
 
 This theme goal is to provide a simple multilingual website. It makes it easy to create a website with a few pages, a blog posts section, some events cards in a blogging style, a basic wiki...
 
@@ -15,15 +15,15 @@ This theme goal is to provide a simple multilingual website. It makes it easy to
 
 To use this theme, you will need to install grav, for instructions on how to do so see [here](https://learn.getgrav.org/basics/installation/), or even simpler use [yunohost](https://yunohost.org/) and the [yunohost grav package](https://github.com/YunoHost-Apps/grav_ynh).
 
-Then just download the theme as a zip from [it's repository](https://framagit.org/squeak/magrav/), decompress it, add it to your site themes folder, run the `bin/buildDists.sh` script, and make magrav your active theme in your config/themes/magrav.yaml (or from the grav admin interface).
+Then just download the theme as a zip from [it's repository](https://framagit.org/squeak/grama/), decompress it, add it to your site themes folder, run the `bin/buildDists.sh` script, and make grama your active theme in your config/themes/grama.yaml (or from the grav admin interface).
 
-To make the best of magrav, it may be of some help to read the following sections, to understand how to use the theme. Even though if you use your site from the admin interface, most options are available and roughly explained there.
+To make the best of grama, it may be of some help to read the following sections, to understand how to use the theme. Even though if you use your site from the admin interface, most options are available and roughly explained there.
 
 
 ### General customization
 
 #### Global options
-The following table lists the available global options magrav proposes:
+The following table lists the available global options grama proposes:
 
 | variable name         | type   | default value | possible values   | explanation                                  |
 | --------------------- | ------ | ------------- | ----------------- | -------------------------------------------- |
@@ -61,13 +61,13 @@ You may create page for authors under `/authors/{{authorName}}/` using the `auth
 To set the author's thumbnail, put it under `/authors/{{authorName}}/thumbnail.png`, `/authors/{{authorName}}/thumbnail.jpg` or `/authors/{{authorName}}/thumbnail.svg`.
 
 #### Tags
-Magrav also supports displaying a page grouping posts by tags.
+Grama also supports displaying a page grouping posts by tags.
 For it to work, you should create a `/tags/` page using the `tag` template.
 
 
 ### Available page templates
 
-Magrav let's you display nicely collections of blog posts, events and wiki articles.
+Grama let's you display nicely collections of blog posts, events and wiki articles.
 
 The `blog` template displays a page listing children blog posts, with previews or excerpt, authors and dates...
 
@@ -91,14 +91,14 @@ The `post` template is used for blogposts. The first image of a post will be use
 Last but not least, the `default` template displays very simply your page content with it's title as header. You may set the following headers: `hide_header`, `hide_title` and `header_no_border` to true if you want to hide the whole title header, only the title, or hide the grey line at the header's bottom. Those three options can also be used in all other templates.
 
 
-## Developing / Tweaking magrav
+## Developing / Tweaking grama
 
 Grav themes have a simple enough structure, that it's fairly easy to customize any theme.
 This theme uses it's own logic, for better editability, fragmenting logics and avoiding duplicating code as much as possible.
 
 Basically grav uses a simple templating language called [Twig](https://twig.symfony.com/doc/2.x/) for its themes.
 
-⚠️ If you get magrav from it's repository, scripts and styles are not built in assets. To test/use magrav, you'll need to build them (see the "Scripts and styles" section below for instructions on how to do it).
+⚠️ If you get grama from it's repository, scripts and styles are not built in assets. To test/use grama, you'll need to build them (see the "Scripts and styles" section below for instructions on how to do it).
 
 
 ### Theme structure
@@ -117,7 +117,7 @@ Also each page imports the `scripts/{{pageTemplateName}}.js` script and `styles/
 You may modify any file, or add any new one, but if you do so, you'll need to run `bin/buildDists.sh` to reaggregate the styles and scripts.
 Note that to run, the `buildDists` script (that you can edit in ./bin/buildDists.sh) depends on the `lessc` command. So you'll have to install it if you want to be able to modify styles.
 
-The easiest thing to do to customize magrav is probably to customize it's colors and display. You can do so by just tweaking a few variables in the `styles/general/theme.less` file.
+The easiest thing to do to customize grama is probably to customize it's colors and display. You can do so by just tweaking a few variables in the `styles/general/theme.less` file.
 
 #### Assets
 The assets folder contains
@@ -130,8 +130,8 @@ If you modify some templates, it may be necessary to modify their corresponding 
 
 ### CSS classes structure
 
-Magrav uses a quite structured class toponomy.
-General magrav classes are in the form: `magrav-...`
+Grama uses a quite structured class toponomy.
+General grama classes are in the form: `grama-...`
 Pages templates classes are in the form: `mat-{{pageTemplateName}}` and `mat-{{pageTemplateName}}--...-...` for subelements.
 Partials templates classes are in the form: `mtp-{{partialTemplateName}}` and `mtp-{{partialTemplateName}}--...-...` for subelements.
 Templates classes are in the form: `mtm-{{modularTemplateName}}` and `mtm-{{modularTemplateName}}--...` for subelements.

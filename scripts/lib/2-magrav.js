@@ -4,7 +4,7 @@ const queryParams = new URLSearchParams(window.location.search);
 //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-const magrav = {
+const grama = {
   //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
   //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
   //                                                  QUERY PARAMETERS GETTER/SETTER
@@ -101,7 +101,7 @@ const magrav = {
     })
     RETURN: <void>
     EXAMPLES:
-      magrav.stickyNavTitle({
+      grama.stickyNavTitle({
         navSelector: ".site-nav-main",
         titleSelector: ".post-full-title",
         activeClass: "nav-post-title-active",
@@ -110,7 +110,7 @@ const magrav = {
   stickyNavTitle: function (options) {
     var nav = document.querySelector(options.navSelector);
     var title = document.querySelector(options.titleSelector);
-    var scrolledElement = document.querySelector(".magrav-body");
+    var scrolledElement = document.querySelector(".grama-body");
 
     var lastScrollY = scrolledElement.scrollTop;
     var ticking = false;

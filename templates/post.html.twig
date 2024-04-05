@@ -9,7 +9,7 @@
 	{#                                 HEADER                                                                #}
 	{#-------------------------------------------------------------------------------------------------------#}
 
-	<div class="magrav-header" {% if post_image %}style="border-bottom: none;"{% endif %}>
+	<div class="grama-header" {% if post_image %}style="border-bottom: none;"{% endif %}>
 
 		{# TITLE #}
 		<h1 class="mat-post--title">{{ page.header.title }}</h1>
@@ -25,7 +25,7 @@
 	{#                                 CONTENT                                                               #}
 	{#-------------------------------------------------------------------------------------------------------#}
 
-  <div class="magrav-content">
+  <div class="grama-content">
 
 		{# FEATURE IMAGE #}
 	  {% if post_image %}
@@ -37,7 +37,7 @@
 	  {% endif %}
 
 		{# POST TEXT #}
-    <div class="mat-post--post magrav-text">
+    <div class="mat-post--post grama-text">
   		{{ content|raw }}
   	</div>
 

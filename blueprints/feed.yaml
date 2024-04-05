@@ -9,7 +9,7 @@ form:
         options:
           fields:
 
-            magrav_options:
+            grama_options:
               fields:
                 header.hide_author_headlines:
                   type: toggle

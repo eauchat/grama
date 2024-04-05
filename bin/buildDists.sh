@@ -11,7 +11,7 @@ cd "$SCRIPT_DIR/../"
 
 # MAKE SURE LESSC DEPENDENCY IS INSTALLED
 lessc --help &> /dev/null || {
-  echo -e "${RED}[magrav] Cannot build styles and scripts, missing lessc dependency! (for install instructions see on https://lesscss.org)${NC}"
+  echo -e "${RED}[grama] Cannot build styles and scripts, missing lessc dependency! (for install instructions see on https://lesscss.org)${NC}"
   exit 1
 }
 
@@ -36,7 +36,7 @@ find ./scripts/modular ./scripts/partials -type f -name "*.js" -exec cat {} \; >
 
 # ECHO RESULT
 if [ $? -ne 0 ]; then
-  echo -e "${RED}[magrav] Error building styles and scripts!${NC}"
+  echo -e "${RED}[grama] Error building styles and scripts!${NC}"
 else
-  echo -e "${GREEN}[magrav] Successfully built styles and scripts!${NC}"
+  echo -e "${GREEN}[grama] Successfully built styles and scripts!${NC}"
 fi

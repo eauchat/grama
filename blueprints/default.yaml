@@ -78,9 +78,9 @@ form:
                   validate:
                     type: array
 
-            magrav_options:
+            grama_options:
               type: section
-              title: Magrav additional options
+              title: Grama additional options
               underline: true
               fields:
                 header.hide_header:

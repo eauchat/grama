@@ -53,18 +53,18 @@
     * Made modular page automatically list children pages
     * Created blueprint for page template modular
     * Made modular gallery use default header template for it's header
-    * Added wiki folder explaining how to use and develop magrav
+    * Added wiki folder explaining how to use and develop grama
 
 # v0.1.0
 ## 2023-03-25
 
 1. [](#new)
-    * Finished first working version of magrav theme
+    * Finished first working version of grama theme
     * Published theme
 
 # v0.0.1
 ## 2023-02-27
 
 1. [](#new)
-    * Created magrav theme from maghost theme
+    * Created grama theme from maghost theme
     * ChangeLog started...

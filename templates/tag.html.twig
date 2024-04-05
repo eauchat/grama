@@ -17,12 +17,12 @@
 	{#                                 FEED                                                                  #}
 	{#-------------------------------------------------------------------------------------------------------#}
 
-  <div class="magrav-content">
+  <div class="grama-content">
 
     <h2>{{ "TAG.POSTS_WITH_THIS_TAG"|t }}</h2>
 
     {# FEED OF POSTS HAVING THIS TAG #}
-    <div class="magrav-feed">
+    <div class="grama-feed">
       {% for p in taxonomy.findTaxonomy({ "tags": tag }) %}
         {% include "partials/post_card.html.twig" with { post: p } %}
       {% endfor %}

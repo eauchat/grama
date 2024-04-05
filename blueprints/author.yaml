@@ -16,7 +16,7 @@ form:
         options:
           fields:
 
-            magrav_options:
+            grama_options:
               fields:
 
                 website:

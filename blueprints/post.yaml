@@ -9,7 +9,7 @@ form:
         options:
           fields:
 
-            magrav_options:
+            grama_options:
               fields:
                 header.hide_image_gallery_in_posts:
                   type: toggle

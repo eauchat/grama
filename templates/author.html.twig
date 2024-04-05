@@ -57,12 +57,12 @@
 	{#                                 FEED                                                                  #}
 	{#-------------------------------------------------------------------------------------------------------#}
 
-  <div class="magrav-content">
+  <div class="grama-content">
 
     <h2>{{ "AUTHOR.POSTS_BY_THIS_AUTHOR"|t }}</h2>
 
     {# FEED OF POSTS BY THIS AUTHOR #}
-    <div class="magrav-feed">
+    <div class="grama-feed">
       {% for p in author_posts %}
         {% include "partials/post_card.html.twig" with { post: p } %}
       {% endfor %}
