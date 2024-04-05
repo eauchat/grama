@@ -13,6 +13,12 @@
      * Another bugfix -->
 
 
+# v0.3.0
+## 2023-04-05
+
+1. [](#new)
+    * Renamed theme to grama (previously magrav)
+
 # v0.2.0
 ## 2023-04-04
 
