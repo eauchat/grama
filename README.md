@@ -132,6 +132,7 @@ If you modify some templates, it may be necessary to modify their corresponding 
 ### CSS classes structure
 
 Grama uses a quite structured class toponomy. Here is how it goes:
+
 | CSS class                     | CSS sub classes                        | What it's used for             |
 | ----------------------------- | -------------------------------------- | ------------------------------ |
 | `grama-...`                   |                                        | General theme specific classes |
