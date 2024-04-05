@@ -91,6 +91,7 @@ The `post` template is used for blogposts. The first image of a post will be use
 Last but not least, the `default` template displays very simply your page content with it's title as header. You may set the following headers: `hide_header`, `hide_title` and `header_no_border` to true if you want to hide the whole title header, only the title, or hide the grey line at the header's bottom. Those three options can also be used in all other templates.
 
 
+
 ## Developing / Tweaking grama
 
 Grav themes have a simple enough structure, that it's fairly easy to customize any theme.
@@ -130,11 +131,13 @@ If you modify some templates, it may be necessary to modify their corresponding 
 
 ### CSS classes structure
 
-Grama uses a quite structured class toponomy.
-General grama classes are in the form: `grama-...`
-Pages templates classes are in the form: `mat-{{pageTemplateName}}` and `mat-{{pageTemplateName}}--...-...` for subelements.
-Partials templates classes are in the form: `mtp-{{partialTemplateName}}` and `mtp-{{partialTemplateName}}--...-...` for subelements.
-Templates classes are in the form: `mtm-{{modularTemplateName}}` and `mtm-{{modularTemplateName}}--...` for subelements.
+Grama uses a quite structured class toponomy. Here is how it goes:
+| CSS class                     | CSS sub classes                        | What it's used for             |
+| ----------------------------- | -------------------------------------- | ------------------------------ |
+| `grama-...`                   |                                        | General theme specific classes |
+| `mat-{{pageTemplateName}}`    | `mat-{{pageTemplateName}}--...-...`    | Page templates                 |
+| `mtp-{{partialTemplateName}}` | `mtp-{{partialTemplateName}}--...-...` | Partials templates             |
+| `mtm-{{modularTemplateName}}` | `mtm-{{modularTemplateName}}--...`     | Modular templates              |
 
 
 
