@@ -1,10 +1,13 @@
 
+{% set authorsPageSlug = theme_var("authors_page_slug") %}
+{% if not authorsPageSlug %} {% set authorsPageSlug = "/authors/" %} {% endif %}
+
 <ul class="mtp-authors_avatars">
   {% for author in authors %}
     <li class="mtp-authors_avatars--avatar {% if hover %}mtp-authors_avatars--hoverable{% endif %}">
 
       {# GET AUTHOR PAGE #}
-      {% set author_page = page.find("/authors/" ~ author) %}
+      {% set author_page = page.find(authorsPageSlug ~ author) %}
 
       {# IF NO AUTHOR PAGE, JUST DISPLAY DEFAULT THUMBNAIL #}
       {% if not author_page %}

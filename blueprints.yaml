@@ -40,6 +40,16 @@ form:
         left: Left
         right: Right
         none: None
+    tag_page_slug:
+      type: text
+      label: Tag details page slug
+      help: The path at which you've set a page with "tag" template
+      default: /tag/
+    authors_page_slug:
+      type: text
+      label: Slug for folder containing authors pages
+      help: The folder under which you've decided to store authors pages
+      default: /authors/
     header-title_class:
       type: text
       label: Header title class
