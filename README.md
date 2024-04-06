@@ -30,6 +30,8 @@ The following table lists the available global options grama proposes:
 | navbar-position       | string | "bottom"      | "bottom", "top"   | whether to display menu bar on top or bottom |
 | navbar-separator      | string | "/"           | any string        | the character to use as separator between menu items |
 | sides                 | string | "both"        | "both", "left", "right", "none" | whether to display the side bars on both side, only left, or only right |
+| tag_page_slug         | string | "/tag/"       | any string        | the path at which you've set a page with "tag" template |
+| authors_page_slug     | string | "/authors/"   | any string        | parent path containing authors folders |
 | header-title_class    | string | ""            | any string        | additional classes to add to the header's title |
 | hide_author_headlines | boolean | false        | true, false, null | whether to display author name and thumbnail in post cards and pages |
 | hide_image_gallery_in_posts | boolean | false  | true, false, null | whether to display image galleries at end of posts |
@@ -60,9 +62,11 @@ You may create page for authors under `/authors/{{authorName}}/` using the `auth
 
 To set the author's thumbnail, put it under `/authors/{{authorName}}/thumbnail.png`, `/authors/{{authorName}}/thumbnail.jpg` or `/authors/{{authorName}}/thumbnail.svg`.
 
+If you want to customize the `/authors/` path, use the `authors_page_slug` theme option.
+
 #### Tags
 Grama also supports displaying a page grouping posts by tags.
-For it to work, you should create a `/tags/` page using the `tag` template.
+For it to work, you should create a `/tag/` page using the `tag` template. But if you wish, you can customize this default path in theme settings.
 
 
 ### Available page templates
@@ -80,7 +84,9 @@ Upload a background image and a title image. And use `img_background` and `img_t
 
 The `author` template as specified previously allows to display a page presenting an author. It supports the `website` header to specify the author's website url. Add `thumbnail.png` and `profile_image.jpg` media for more graphical author's presentation.
 
-The `tag` template as specified previously allow to display a page grouping posts by tag.
+The `tag` template as specified previously allow to display a page grouping posts by tag. Don't forget to create a tag page. By default it's expected to have the `/tag/` slug, but you can customize it with the `tag_page_slug` theme setting if you wish.
+
+The `tagslist` template lets you display a page listing all site tags.
 
 The `gallery`, `gallery_raw` templates and `gallery` modular all allow you to display some gallery pages or sections. The `gallery_raw` template is the only one not displaying side bars.
 
