@@ -40,16 +40,26 @@ form:
         left: Left
         right: Right
         none: None
-    tag_page_slug:
-      type: text
-      label: Tag details page slug
-      help: The path at which you've set a page with "tag" template
-      default: /tag/
     authors_page_slug:
       type: text
       label: Slug for folder containing authors pages
       help: The folder under which you've decided to store authors pages
       default: /authors/
+    tag_page_slug:
+      type: text
+      label: Tag details page slug
+      help: The path at which you've set a page with "tag" template
+      default: /tag/
+    display_tags_in_post_cards:
+      type: toggle
+      label: Display tags in post cards
+      help: Whether to display list of post tags in post cards
+      options:
+        1: PLUGIN_ADMIN.YES
+        0: PLUGIN_ADMIN.NO
+      validate:
+        type: bool
+      default: false
     header-title_class:
       type: text
       label: Header title class

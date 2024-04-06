@@ -30,8 +30,9 @@ The following table lists the available global options grama proposes:
 | navbar-position       | string | "bottom"      | "bottom", "top"   | whether to display menu bar on top or bottom |
 | navbar-separator      | string | "/"           | any string        | the character to use as separator between menu items |
 | sides                 | string | "both"        | "both", "left", "right", "none" | whether to display the side bars on both side, only left, or only right |
-| tag_page_slug         | string | "/tag/"       | any string        | the path at which you've set a page with "tag" template |
 | authors_page_slug     | string | "/authors/"   | any string        | parent path containing authors folders |
+| tag_page_slug         | string | "/tag/"       | any string        | the path to your page with "tag" template |
+| display_tags_in_post_cards | boolean | false   | true, false, null | whether to display a list of post tags in post cards |
 | header-title_class    | string | ""            | any string        | additional classes to add to the header's title |
 | hide_author_headlines | boolean | false        | true, false, null | whether to display author name and thumbnail in post cards and pages |
 | hide_image_gallery_in_posts | boolean | false  | true, false, null | whether to display image galleries at end of posts |
