@@ -13,11 +13,23 @@
      * Another bugfix -->
 
 
+# v0.3.1
+## 2023-04-06
+
+1. [](#new)
+    * Made it possible to display tags in post cards.
+2. [](#improved)
+    * Made it possible to customize authors and tag paths/slugs.
+    * Improved documentation.
+    * Small fixes in tag page and tags list. Made it possible to add some text to tag page.
+3. [](#bugfix)
+    * Fixed elements forgotten in renaming process.
+
 # v0.3.0
 ## 2023-04-05
 
 1. [](#new)
-    * Renamed theme to grama (previously magrav)
+    * Renamed theme to grama (previously magrav).
 
 # v0.2.0
 ## 2023-04-04
