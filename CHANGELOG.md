@@ -13,6 +13,12 @@
      * Another bugfix -->
 
 
+# v0.3.2
+## 2023-04-08
+
+1. [](#improved)
+    * The setting "hide_header_image" now also affects post pages (not only post cards).
+
 # v0.3.1
 ## 2023-04-06
 
