@@ -28,7 +28,7 @@
   <div class="grama-content">
 
 		{# FEATURE IMAGE #}
-	  {% if post_image %}
+	  {% if post_image and not page.header.hide_header_image %}
 	    <img class="mat-post--image"
 	        loading="lazy"
 	        src="{{ post_image.cropResize(1200,1200).url }}"
