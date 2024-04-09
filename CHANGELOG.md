@@ -13,6 +13,13 @@
      * Another bugfix -->
 
 
+# v0.3.3
+## 2024-04-09
+
+1. [](#bugfix)
+    * Corrected dates in changelog file
+    * More renaming fixes
+
 # v0.3.2
 ## 2024-04-08
 
