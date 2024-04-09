@@ -14,13 +14,13 @@
 
 
 # v0.3.2
-## 2023-04-08
+## 2024-04-08
 
 1. [](#improved)
     * The setting "hide_header_image" now also affects post pages (not only post cards).
 
 # v0.3.1
-## 2023-04-06
+## 2024-04-06
 
 1. [](#new)
     * Made it possible to display tags in post cards.
@@ -32,13 +32,13 @@
     * Fixed elements forgotten in renaming process.
 
 # v0.3.0
-## 2023-04-05
+## 2024-04-05
 
 1. [](#new)
     * Renamed theme to grama (previously magrav).
 
 # v0.2.0
-## 2023-04-04
+## 2024-04-04
 
 1. [](#improved)
     * Blog, calendar and wiki templates will show list of posts from collection if it's set or will default to children pages.
@@ -53,25 +53,25 @@
     * Added possibility to hide header image in posts pages and cards.
 
 # v0.1.4
-## 2023-04-01
+## 2024-04-01
 
 1. [](#bugfix)
     * Fixed misuse of safe_truncate in post and event cards.
 
 # v0.1.3
-## 2023-04-01
+## 2024-04-01
 
 1. [](#improved)
     * Make buildDist script log a nice error message if missing lessc dependency
 
 # v0.1.2
-## 2023-04-01
+## 2024-04-01
 
 1. [](#improved)
     * Merged whole wiki folder into README file
 
 # v0.1.1
-## 2023-03-31
+## 2024-03-31
 
 1. [](#new)
     * Made modular page automatically list children pages
@@ -80,14 +80,14 @@
     * Added wiki folder explaining how to use and develop grama
 
 # v0.1.0
-## 2023-03-25
+## 2024-03-25
 
 1. [](#new)
     * Finished first working version of grama theme
     * Published theme
 
 # v0.0.1
-## 2023-02-27
+## 2024-02-27
 
 1. [](#new)
     * Created grama theme from maghost theme
