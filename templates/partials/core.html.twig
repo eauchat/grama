@@ -76,6 +76,26 @@
   {# to add styles from pages and components #}
   {% block scripts %}{% endblock %}
 
+  <script>
+    /*\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/*/
+    /*\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/*/
+
+    // APPLY TOGGLEABILITY TO ALL REQUESTED ELEMENT IN THEME OR PAGE HEADER
+    var toggleableConfig = {{ theme_var("toggleable")|json_encode|raw }};
+    if (toggleableConfig) _.each(toggleableConfig, function (toggleTrigger, elementToMakeToggleable) {
+      grama.toggleable(elementToMakeToggleable, toggleTrigger);
+    });
+
+    // MAKE ELEMENTS TOGGLEABLE
+    $("[grama-toggleable]").each(function () {
+      grama.toggleable($(this), $(this).attr("grama-toggleable"));
+    });
+
+    /*\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/*/
+    /*\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/*/
+  </script>
+
+
   {#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
   {#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
 </body>

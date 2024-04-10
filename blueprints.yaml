@@ -85,3 +85,10 @@ form:
       validate:
         type: bool
       default: false
+    toggleable:
+      toggleable: true
+      type: array
+      label: Toggleable elements
+      help: List of elements that will be hidden by default unless the user clicks on a button (keys of the object are the toggled element jquery selectors, and values are jquery selectors for the elements that if clicked will trigger toggling)
+      placeholder_key: .some-class-of-elements-to-hide-unless
+      placeholder_value: .element-having-this-class-is-clicked
