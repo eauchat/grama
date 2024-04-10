@@ -36,6 +36,7 @@ The following table lists the available global options grama proposes:
 | header-title_class    | string | ""            | any string        | additional classes to add to the header's title |
 | hide_author_headlines | boolean | false        | true, false, null | whether to display author name and thumbnail in post cards and pages |
 | hide_image_gallery_in_posts | boolean | false  | true, false, null | whether to display image galleries at end of posts |
+| toggleable | object | {}  | any object | a list of elements that will be hidden by default unless the user clicks on a button (keys of the object are the toggled element jquery selectors, and values are jquery selectors for the elements that if clicked will trigger toggling)  |
 
 #### Customize site colors, content width...
 To customize the colors to use in the site, you can use the "Custom CSS" plugin.
@@ -49,6 +50,24 @@ For example, to make the content wider, you could use it to add the following:
 
 The list of variables used by the theme, that you can customize is available in [the theme file](styles/general/theme.less).
 
+#### CSS classes and attributes you can use to customize elements in your pages
+Grama provides a few simple classes and attributes you can use in your pages contents to style them.
+
+| classes        | action |
+| -------------- | ------ |
+| centered       | will set text-align: center; css |
+| centered_image | use it on image to center it |
+| hidden         | hide the element |
+| image_subtitle | make the element small, grey and centered (ideal for an image subtitle) |
+| tag-button     | make the element look like a clickable button (with grey border around) |
+
+##### grama-toggleable
+Add this attribute to an element to make it hidden by default. The value of the attribute is a jquery selector. If clicked, all elements matching the jquery selector will trigger the toggling of the display of the element having grama-toggleable attribute.
+Example:
+```
+<span class="span-to-click">Click here</span> to toggle image display.
+<img src="some-image" grama-toggleable=".span-to-click">
+```
 
 ### Special pages and media
 
