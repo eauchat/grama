@@ -17,7 +17,7 @@
 
   <div class="grama-content">
     {% for module in page.children() %}
-      <div class="mat-modular--module">
+      <div class="mat-modular--module mat-modular--template--{{ module.template }} mat-modular--title--{{ module.title|regex_replace("/^_\\d\\d\\./", "") }}">
         {{ module.content|raw }}
       </div>
     {% endfor %}
