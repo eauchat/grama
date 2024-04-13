@@ -13,12 +13,25 @@
      * Another bugfix -->
 
 
+# v0.4.0
+## 2024-04-13
+
+1. [](#bugfix)
+    * Fixed small styling issues
+2. [](#new)
+    * Made it easy to have elements toggleable by setting classes&attributes in content or from theme/header "toggleable" variable (see README for more info on how to use it).
+    * Template name is now also applied as a class to main container, so it can be used for general stylings.
+    * Template name and title (without prefix) are now applied as classes to modular page container element.
+    * Added a default modular template.
+3. [](#improved)
+    * Removed `calendar` template and `post_event` partial, the same functionality is now accessible with blog template and `post_cards_full_width` option (also usable in `tag` and `author` templates).
+
 # v0.3.3
 ## 2024-04-09
 
 1. [](#bugfix)
-    * Corrected dates in changelog file
-    * More renaming fixes
+    * Corrected dates in changelog file.
+    * More renaming fixes.
 
 # v0.3.2
 ## 2024-04-08
