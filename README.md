@@ -93,9 +93,7 @@ For it to work, you should create a `/tag/` page using the `tag` template. But i
 
 Grama let's you display nicely collections of blog posts, events and wiki articles.
 
-The `blog` template displays a page listing children blog posts, with previews or excerpt, authors and dates...
-
-The `calendar` template displays children blog posts with a bit more focus on their content, so that user does not necessarily have to open the event to read the content, also it doesn't specify the authors of the posts.
+The `blog` template displays a page listing children blog posts, with previews or excerpt, authors and dates... If you want to have more focus on posts content, you can set the `post_cards_full_width` header option to true, this way posts won't be displayed in a grid but take up the whole page width, and a longer excerpt of the post will be displayed.
 
 The `wiki` template displays the posts in a very dense way, only showing their title.
 

@@ -10,7 +10,7 @@ en:
     GO_TO_HOME: "Go to the front page →"
   AUTHOR_CARD:
     READ_MORE_POSTS_BY_THIS_AUTHOR: Read %s more posts %s by this author.
-  EVENT_CARD:
+  POST_CARD:
     READ_MORE: read more
   POST_FOOTER:
     PREVIOUS_AND_NEXT: "Previous and next posts:"
@@ -29,7 +29,7 @@ fr:
     GO_TO_HOME: "Aller à la page d'accueil →"
   AUTHOR_CARD:
     READ_MORE_POSTS_BY_THIS_AUTHOR: Lire %s plus de posts %s par cet auteur.
-  EVENT_CARD:
+  POST_CARD:
     READ_MORE: lire la suite
   POST_FOOTER:
     PREVIOUS_AND_NEXT: "Posts précédent et suivant:"
@@ -48,7 +48,7 @@ it:
     GO_TO_HOME: "Vai alla pagina iniziale →"
   AUTHOR_CARD:
     READ_MORE_POSTS_BY_THIS_AUTHOR: "%s Altri post %s di questa autrice."
-  EVENT_CARD:
+  POST_CARD:
     READ_MORE: continua a leggere
   POST_FOOTER:
     PREVIOUS_AND_NEXT: "Post precedente e seguente:"

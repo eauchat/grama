@@ -1,5 +1,5 @@
 
-<div class="mtp-post_card">
+<div class="mtp-post_card {% if fullWidth %}mtp-post_card_full_width{% endif %}">
   {#-------------------------------------------------------------------------------------------------------#}
   {#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
   {#-------------------------------------------------------------------------------------------------------#}
@@ -23,9 +23,9 @@
       {# TITLE #}
       <div class="content-link-title">{{ post.title|raw }}</div>
 
-      {# EXCERPT (if no image) #}
+      {# EXCERPT (if no image and not fullWidth) #}
       {% set post_image = post.media.images|first %}
-      {% if not post_image or post.header.hide_header_image %}
+      {% if (not post_image or post.header.hide_header_image) and not fullWidth %}
         <div class="content-link-excerpt">
           <p>{{ post.content|raw|striptags|safe_truncate(200)|raw  }}</p>
         </div>
@@ -37,7 +37,19 @@
     {% include "partials/post_headline.html.twig" with {
       post: post,
       tags: theme_var("display_tags_in_post_cards") ? post.header.taxonomy.tags,
+      fullWidth: fullWidth,
     } %}
+
+    {# CONTENT AND READ MORE (if fullWidth) #}
+    {% if fullWidth %}
+      <div class="content-long_excerpt">
+        <p>{{ post.content|raw|striptags|safe_truncate(500)|raw  }}</p>
+      </div>
+      <script> console.log({{ post.content|length|json_encode|raw }}) </script>
+      {% if post.content %}
+        <a class="content-read_more" href="{{ post.url }}">{{ "POST_CARD.READ_MORE"|t }}</a>
+      {% endif %}
+    {% endif %}
 
   </div>
 

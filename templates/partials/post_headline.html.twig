@@ -31,8 +31,10 @@
       <div class="authors">{{ (post.header.taxonomy.authors ?: [config.site.author.name])|join(", ")|raw }}</div>
     {% endif %}
     {# post date #}
-    <div class="details">
+    <div class="details {% if fullWidth %}details-full_width{% endif %}">
       <time class="date" datetime="{{ post.header.date|date(system.pages.dateformat.short) }}">{{ post.header.date|date(system.pages.dateformat.short) }}</time>
+      {% if fullWidth and post.header.taxonomy.location %}<span class="delimiter">·</span>{% endif %}
+      <div class="location">{{ post.header.taxonomy.location }}</div>
     </div>
   </div>
 

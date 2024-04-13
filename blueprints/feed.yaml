@@ -22,3 +22,14 @@ form:
                   validate:
                     type: bool
                   default: false
+                header.post_cards_full_width:
+                  type: toggle
+                  toggleable: true
+                  label: Make post cards use full width
+                  help: Make post cards use the full width of the page (instead of having a grid-like display)
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool
+                  default: false

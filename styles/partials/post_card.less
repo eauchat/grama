@@ -7,10 +7,16 @@
 
   text-align: justify;
   padding: 1em;
-  flex: 1 1 301px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 301px;
   border-bottom: var(--baseContrastMilder) solid 1px;
   display: flex;
   flex-direction: column;
+
+  &.mtp-post_card_full_width {
+    flex-basis: 901px;
+  }
 
   // make sure margins of p are not too big
   p { margin: .4em 0; }
@@ -42,6 +48,11 @@
         padding-top: .5em;
       }
 
+    }
+
+    .content-long_excerpt {}
+    .content-read_more {
+      margin-top: .5em;
     }
 
   }

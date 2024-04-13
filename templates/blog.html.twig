@@ -16,7 +16,11 @@
   {#-------------------------------------------------------------------------------------------------------#}
 
   <div class="grama-content grama-feed">
-    {% include "partials/feed.html.twig" with { card_template: "partials/post_card.html.twig", reverse: true } %}
+    {% include "partials/feed.html.twig" with {
+      card_template: "partials/post_card.html.twig",
+      reverse: true,
+      fullWidth: page.header.post_cards_full_width,
+    } %}
   </div>
 
   {#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
