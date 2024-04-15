@@ -11,3 +11,5 @@
 {% for p in collection %}
   {% include card_template with { post: p } %}
 {% endfor %}
+
+{% if not collection|length %}<div class="mtp-feed-no_posts_placeholder">{{ "FEED.NO_POSTS_PLACEHOLDER"|t }}</div>{% endif %}

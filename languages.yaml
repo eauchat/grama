@@ -4,6 +4,8 @@ en:
   AUTHOR:
     WEBSITE: "website"
     POSTS_BY_THIS_AUTHOR: "Posts by this author:"
+  FEED:
+    NO_POSTS_PLACEHOLDER: "No posts here yet."
   TAG:
     POSTS_WITH_THIS_TAG: "Posts tagged with this category:"
   ERROR:
@@ -23,6 +25,8 @@ fr:
   AUTHOR:
     WEBSITE: "site internet"
     POSTS_BY_THIS_AUTHOR: "Posts de cet auteur:"
+  FEED:
+    NO_POSTS_PLACEHOLDER: "Pas encore de posts ici."
   TAG:
     POSTS_WITH_THIS_TAG: "Posts dans cette categorie:"
   ERROR:
@@ -42,6 +46,8 @@ it:
   AUTHOR:
     WEBSITE: "sito web"
     POSTS_BY_THIS_AUTHOR: "Posts di questa autrice:"
+  FEED:
+    NO_POSTS_PLACEHOLDER: "Non c'è ancora nessun post qua."
   TAG:
     POSTS_WITH_THIS_TAG: "Posts in questa categoria:"
   ERROR:
