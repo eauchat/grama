@@ -34,7 +34,7 @@
     <div class="details {% if fullWidth %}details-full_width{% endif %}">
       <time class="date" datetime="{{ post.header.date|date(system.pages.dateformat.short) }}">{{ post.header.date|date(system.pages.dateformat.short) }}</time>
       {% if fullWidth and post.header.taxonomy.location %}<span class="delimiter">·</span>{% endif %}
-      <div class="location">{{ post.header.taxonomy.location }}</div>
+      <div class="location">{{ post.header.taxonomy.location|join(", ") }}</div>
     </div>
   </div>
 
