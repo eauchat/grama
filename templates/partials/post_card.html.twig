@@ -33,7 +33,7 @@
 
     </a>
 
-    {# POST HEADLINE (CONTAINING: AUTHORS, TAGS, READING TIME...) #}
+    {# POST HEADLINE (CONTAINING: AUTHORS, TAGS...) #}
     {% include "partials/post_headline.html.twig" with {
       post: post,
       tags: theme_var("display_tags_in_post_cards") ? post.header.taxonomy.tag,
@@ -45,7 +45,6 @@
       <div class="content-long_excerpt">
         <p>{{ post.content|raw|striptags|safe_truncate(500)|raw  }}</p>
       </div>
-      <script> console.log({{ post.content|length|json_encode|raw }}) </script>
       {% if post.content %}
         <a class="content-read_more" href="{{ post.url }}">{{ "POST_CARD.READ_MORE"|t }}</a>
       {% endif %}
