@@ -1,6 +1,6 @@
-{% set primary_tag = post.header.taxonomy.tags|first %}
+{% set primary_tag = post.header.taxonomy.tag|first %}
 {% set primary_tag_url = page.find("/tags/").url ~'?tag='~ primary_tag %}
-{% set related_posts_collection = taxonomy.findTaxonomy({ "tags": primary_tag }) %}
+{% set related_posts_collection = taxonomy.findTaxonomy({ "tag": primary_tag }) %}
 {% set collection = post.parent.children %}
 
 {% if related_posts_collection|length or not (collection.isFirst(post.path) and collection.isLast(post.path)) %}

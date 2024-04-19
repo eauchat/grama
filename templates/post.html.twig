@@ -15,7 +15,7 @@
 		<h1 class="mat-post--title">{{ page.header.title }}</h1>
 
 	  {# POST HEADLINE (CONTAINING: AUTHORS, TAGS, DATE) #}
-	  {% include "partials/post_headline.html.twig" with { post: page, tags: page.header.taxonomy.tags, withoutAuthorCard: true } %}
+	  {% include "partials/post_headline.html.twig" with { post: page, tags: page.header.taxonomy.tag, withoutAuthorCard: true } %}
 
 	</div>
 

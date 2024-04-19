@@ -26,7 +26,7 @@
 
     {# FEED OF POSTS HAVING THIS TAG #}
     <div class="grama-feed">
-      {% for p in taxonomy.findTaxonomy({ "tags": tag }) %}
+      {% for p in taxonomy.findTaxonomy({ "tag": tag }) %}
         {% include "partials/post_card.html.twig" with { post: p } %}
       {% endfor %}
     </div>

@@ -36,7 +36,7 @@
     {# POST HEADLINE (CONTAINING: AUTHORS, TAGS, READING TIME...) #}
     {% include "partials/post_headline.html.twig" with {
       post: post,
-      tags: theme_var("display_tags_in_post_cards") ? post.header.taxonomy.tags,
+      tags: theme_var("display_tags_in_post_cards") ? post.header.taxonomy.tag,
       fullWidth: fullWidth,
     } %}
 

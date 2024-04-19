@@ -18,7 +18,7 @@
   {# AUTHORS PROFILE IMAGES #}
   {% if not hide_author == true %}
     {% include "partials/authors_avatars.html.twig" with {
-      authors: post.header.taxonomy.authors ?: [config.site.author.name],
+      authors: post.header.taxonomy.author ?: [config.site.author.name],
       post: post,
       hover: not withoutAuthorCard,
     } %}
@@ -28,7 +28,7 @@
   <div class="content" {% if hide_author %} style="margin-left: 0;" {% endif %}>
     {# post authors #}
     {% if not hide_author == true %}
-      <div class="authors">{{ (post.header.taxonomy.authors ?: [config.site.author.name])|join(", ")|raw }}</div>
+      <div class="authors">{{ (post.header.taxonomy.author ?: [config.site.author.name])|join(", ")|raw }}</div>
     {% endif %}
     {# post date #}
     <div class="details {% if fullWidth %}details-full_width{% endif %}">

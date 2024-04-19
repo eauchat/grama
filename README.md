@@ -77,7 +77,7 @@ To create a frieze of images on the sides of pages and posts, create a `/images/
 Also, to set a favicon to your site, you may add it in the `/images/` page as `favicon.png`.
 
 #### Authors
-Posts will have an author, whether you set it in the post taxonomy.authors header, or defaulting to the site author.
+Posts will have an author, whether you set it in the post taxonomy.author header, or defaulting to the site author.
 You may create page for authors under `/authors/{{authorName}}/` using the `author` template.
 
 To set the author's thumbnail, put it under `/authors/{{authorName}}/thumbnail.png`, `/authors/{{authorName}}/thumbnail.jpg` or `/authors/{{authorName}}/thumbnail.svg`.

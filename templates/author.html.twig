@@ -11,14 +11,14 @@
   {% set author_posts = pages.collection({ items: "@root.descendants" })
     |filter(p => p.template == "post")
     |filter(p =>
-      (not p.header.taxonomy.authors|length)
-      or (config.site.author.name in p.header.taxonomy.authors)
+      (not p.header.taxonomy.author|length)
+      or (config.site.author.name in p.header.taxonomy.author)
     )
     |reverse
   %}
 {# ELSE GET ALL POSTS/PAGES HAVING AUTHOR NAME IN TAXONOMY #}
 {% else %}
-  {% set author_posts = taxonomy.findTaxonomy({ "authors": page.slug }).order("header.date", "desc") %}
+  {% set author_posts = taxonomy.findTaxonomy({ "author": page.slug }).order("header.date", "desc") %}
 {% endif %}
 
 {#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
