@@ -5,6 +5,8 @@ Grama is a theme for [the grav CMS](https://getgrav.org/). It allows you to crea
 
 This theme goal is to provide a simple multilingual website. It makes it easy to create a website with a few pages, a blog posts section, some events cards in a blogging style, a basic wiki...
 
+This theme doesn't include by default reference to any social network, analytics scripts, or any GAFAM+ fonts or libraries. This a design choice to enhance site owners/visitors privacy. You may add any of those elements on your website by yourself, but please don't ask me to include them by default, since I designed this theme with the explicit goal not to have those elements baked in a theme.
+
 ![screenshot](./screenshot.jpg)
 
 
@@ -166,7 +168,18 @@ Grama uses a quite structured class toponomy. Here is how it goes:
 
 
 
-## Copyright & License
+## Credits
+
+This theme is a grav adaptation of the [maghost ghost theme](https://squeak.eauchat.org/maghost/) and some of it's code is inspired from [grav antimatter theme](https://github.com/getgrav/grav-theme-antimatter).
+Grama is of any use only thanks to [the grav CMS](https://getgrav.org) which makes 99% of the work of making your website run, in fact.
+And some stuff are made much easier by the following amazing javascript libraries: [jquery](https://jquery.com/) and [underscorejs](https://underscorejs.org/).
+
+
+
+## License
 
 This theme is licensed under GNU-AGPLv3 license.
-It is a grav adaptation of the [maghost ghost theme](https://squeak.eauchat.org/maghost/) and some of it's code is inspired from [grav antimatter theme](https://github.com/getgrav/grav-theme-antimatter).
+You're free to use, share, modify, republish codes and contents here only in fully free software and projects, and on infrastructures that provide services using exclusively free software compatible with the AGPL license. This work is free software, and wants to remain it, so you're not welcome to use it if you want to turn it into non-free software.
+You're also very welcome to contribute to this work, and I'll do my best to integrate proposed contributions so that everyone using this theme can benefit improvements.
+
+See [LICENSE](LICENSE) for the actual license text.
