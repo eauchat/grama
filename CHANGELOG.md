@@ -13,6 +13,14 @@
      * Another bugfix -->
 
 
+# v0.5.0
+## 2024-04-20
+
+1. [](#improved)
+    * Use tag and author taxonomies instead of tags and authors.
+    * Location taxonomy can now be an array.
+    * Added "credits" section in README and improved it's content a bit.
+
 # v0.4.1
 ## 2024-04-15
 
