@@ -27,22 +27,26 @@ To make the best of grama, it may be of some help to read the following sections
 #### Global options
 The following table lists the available global options grama proposes:
 
-| variable name         | type   | default value | possible values   | explanation                                  |
-| --------------------- | ------ | ------------- | ----------------- | -------------------------------------------- |
-| navbar-position       | string | "bottom"      | "bottom", "top"   | whether to display menu bar on top or bottom |
-| navbar-separator      | string | "/"           | any string        | the character to use as separator between menu items |
-| sides                 | string | "both"        | "both", "left", "right", "none" | whether to display the side bars on both side, only left, or only right |
-| authors_page_slug     | string | "/authors/"   | any string        | parent path containing authors folders |
-| tag_page_slug         | string | "/tag/"       | any string        | the path to your page with "tag" template |
-| display_tags_in_post_cards | boolean | false   | true, false, null | whether to display a list of post tags in post cards |
-| header-title_class    | string | ""            | any string        | additional classes to add to the header's title |
+| variable name         | type   | default value | possible values   | explanation                                                          |
+| --------------------- | ------ | ------------- | ----------------- | -------------------------------------------------------------------- |
+| navbar-position       | string | "bottom"      | "bottom", "top"   | whether to display menu bar on top or bottom                         |
+| navbar-separator      | string | "/"           | any string        | the character to use as separator between menu items                 |
+| sides                 | string | "both"        | "both", "left", "right", "none" | whether to display the side bars on both side, only left, or only right                                                                                                                                  |
+| authors_page_slug     | string | "/authors/"   | any string        | parent path containing authors folders                               |
+| tag_page_slug         | string | "/tag/"       | any string        | the path to your page with "tag" template                            |
+| display_tags_in_post_cards | boolean | false   | true, false, null | whether to display a list of post tags in post cards                 |
+| header-title_class    | string | ""            | any string        | additional classes to add to the header's title                      |
 | hide_author_headlines | boolean | false        | true, false, null | whether to display author name and thumbnail in post cards and pages |
-| hide_image_gallery_in_posts | boolean | false  | true, false, null | whether to display image galleries at end of posts |
-| toggleable | object | {}  | any object | a list of elements that will be hidden by default unless the user clicks on a button (keys of the object are the toggled element jquery selectors, and values are jquery selectors for the elements that if clicked will trigger toggling)  |
+| hide_image_gallery_in_posts | boolean | false  | true, false, null | whether to display image galleries at end of posts                   |
+| toggleable | object | {}  | any object | a list of elements that will be hidden by default unless the user clicks on a button (keys of the object are the toggled element jquery selectors, and values are jquery selectors for the elements that if clicked will trigger toggling)           |
+| background-image      | string | ""            | any string        | path to background file to use in all or single page                 |
+| background-size       | string | "cover"       | "cover", "contain"... | CSS background-size attribute to use                             |
+| stylesheet            | string | ""            | any string        | CSS that will be added inline to every page                          |
+| pageStylesheet        | string | ""            | any string        | use this in page headers to customize the given page stylesheet      |
 
 #### Customize site colors, content width...
-To customize the colors to use in the site, you can use the "Custom CSS" plugin.
-For example, to make the content wider, you could use it to add the following:
+To customize the colors to use in the site, you can change values of grama theme CSS variables, you can do this through the stylesheet option or using the "Custom CSS" plugin.
+For example, to make the content wider, you could add the following to stylesheet:
 ```css
 :root {
   --content_width: 60vw;

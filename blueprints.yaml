@@ -92,3 +92,23 @@ form:
       help: List of elements that will be hidden by default unless the user clicks on a button (keys of the object are the toggled element jquery selectors, and values are jquery selectors for the elements that if clicked will trigger toggling)
       placeholder_key: .some-class-of-elements-to-hide-unless
       placeholder_value: .element-having-this-class-is-clicked
+    background-image:
+      type: text
+      label: Pages background
+      help: Path to background file to use for all pages.
+      default: ""
+    background-size:
+      type: select
+      label: Pages background
+      help: Make background full screen, covering all, or contained within page boundaries with margins around.
+      default: cover
+      options:
+        cover: cover
+        contain: contain
+    stylesheet:
+      toggleable: true
+      type: editor
+      codemirror:
+        mode: css
+      label: Pages stylesheet
+      help: CSS that will be added inline to every page

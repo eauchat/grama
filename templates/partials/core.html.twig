@@ -53,7 +53,11 @@
   {#                                 CONTENT                                                               #}
   {#-------------------------------------------------------------------------------------------------------#}
 
-  <div class="grama">
+  {# get eventual page background settings #}
+  {% set pageBackgroundImage = theme_var("background-image") %}
+  {% set pageBackgroundSize = theme_var("background-size") %}
+
+  <div class="grama" style="{% if pageBackgroundImage %} background-image: url({{pageBackgroundImage}}); {% endif %}{% if pageBackgroundSize %} background-size: {{pageBackgroundSize}}; {% endif %}">
 
     {# Navigation menu #}
     {% block header %}
@@ -95,6 +99,11 @@
     /*\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/*/
   </script>
 
+  {# add any custom global or page styles #}
+  {% set customStylesGlobal = theme_var("stylesheet") %}
+  {% if customStylesGlobal %}<style>{{customStylesGlobal}}</style>{% endif %}
+  {% set customStylesPage = page.header.pageStylesheet %}
+  {% if customStylesPage %}<style>{{customStylesPage}}</style>{% endif %}
 
   {#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
   {#|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||#}
