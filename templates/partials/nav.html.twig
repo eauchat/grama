@@ -16,7 +16,7 @@
 
         <a class="{{ current_page }}" href="{{ page.url }}">
           {%- if page.header.icon %}<i class="fa fa-{{ page.header.icon }}"></i>{% endif -%}
-          {{- page.menu -}}
+          {{- page.menu | raw -}}
         </a>
 
         {% if loop.last == false %}<span class="mtp-nav--navbar_separator">{{ navbar_separator|raw }}</span>{% endif %}

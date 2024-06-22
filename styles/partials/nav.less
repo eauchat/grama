@@ -25,6 +25,8 @@
   }
 
   a { color: var(--baseContrast); }
+  // if titles are images, make sure they aren't two big
+  img { height: 1.5em; }
 
   //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
   //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
@@ -33,6 +35,9 @@
 
   .mtp-nav--pageslist {
     float: right;
+    // useful when titles are images:
+    display: flex;
+    align-items: center;
   }
   .mtp-nav--current { text-decoration: underline; }
   .mtp-nav--navbar_separator { padding: 0 5px }
