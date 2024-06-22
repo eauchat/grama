@@ -13,6 +13,15 @@
      * Another bugfix -->
 
 
+# v0.5.1
+## 2024-06-22
+
+1. [](#new)
+    * Added background-image, background-size, stylesheet and pageStylesheet theme variables, improved default styling of backgrounds.
+2. [](#improved)
+    * Now displays image.meta.alt_text under each image in galleries.
+    * Support having images as menu titles in navbar.
+
 # v0.5.0
 ## 2024-04-20
 
