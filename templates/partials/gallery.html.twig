@@ -7,6 +7,9 @@
   "
 >
   {% for image in images %}
-    {{ image.lightbox().cropZoom(200,200).html(image.basename)|raw }}
+    <span class="mtp-gallery--image">
+      {{ image.lightbox().cropZoom(200,200).html(image.basename)|raw }}
+      {% if image.meta.alt_text %}<span class="mtp-gallery--image_title">{{ image.meta.alt_text }}</span>{% endif %}
+    </span>
   {% endfor %}
 </div>

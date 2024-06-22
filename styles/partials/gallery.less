@@ -3,8 +3,15 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
-  a {
+  .mtp-gallery--image {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    a {
+      display: flex;
+      justify-content: center;
+    }
+    .mtp-gallery--image_title {
+      text-align: center;
+    }
   }
 }
