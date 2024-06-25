@@ -8,8 +8,18 @@
 >
   {% for image in images %}
     <span class="mtp-gallery--image">
-      {{ image.lightbox().cropZoom(200,200).html(image.basename)|raw }}
-      {% if image.meta.alt_text %}<span class="mtp-gallery--image_title">{{ image.meta.alt_text }}</span>{% endif %}
+
+      {# FIGURE OUT IF THERE IS A TITLE (OR A LIST OF TITLE BY LANGUAGE) TO THE IMAGE #}
+      {% set imageTitle = image.meta.title is iterable ? image.meta.title[grav.language.getActive] : image.meta.title %}
+      {# SAME IN CASE FEATHERLIGHT TITLE SHOULD BE DIFFERENT #}
+      {% set imageTitleLightbox = image.meta.title_lightbox is iterable ? image.meta.title_lightbox[grav.language.getActive] : image.meta.title_lightbox %}
+
+      {# CREATE IMAGE WITH LIGHTBOX #}
+      {{ image.lightbox().cropZoom(200,200).html(image.basename, imageTitleLightbox ?: imageTitle)|raw }}
+
+      {# IF TITLE SHOULD BE DISPLAYED UNDER IMAGE, DO IT #}
+      {% if imageTitle %}<span class="mtp-gallery--image_title">{{ imageTitle }}</span>{% endif %}
+
     </span>
   {% endfor %}
 </div>

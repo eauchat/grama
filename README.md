@@ -75,6 +75,19 @@ Example:
 <img src="some-image" grama-toggleable=".span-to-click">
 ```
 
+#### Lightbox and image titles
+
+In gallery pages, if you want to have titles displayed under each gallery image, you should create a metadata file for each image.
+If your image is named `myImage.jpg` name your metadata file `myImage.jpg.meta.yaml`.
+Specify titles to display with the `title` key. To have the same title for all language, use a string. For different titles depending on the language it should look like this:
+```yaml
+title:
+  en: Image title in english
+  fr: Titre de l'image en français
+```
+The title will be displayed under the image and fullscreen in lightbox. You can specify a different title for lightbox (or a title to display only in lightbox) using the `title_lightbox` key.
+
+
 ### Special pages and media
 
 #### Sides images and other images
