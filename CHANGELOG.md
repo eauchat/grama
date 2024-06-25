@@ -13,6 +13,12 @@
      * Another bugfix -->
 
 
+# v0.5.4
+## 2024-06-25
+
+1. [](#improved)
+    * Fixed theme coloring issues, made featherlight use theme color schemes.
+
 # v0.5.3
 ## 2024-06-25
 
