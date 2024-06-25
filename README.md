@@ -86,6 +86,10 @@ title:
   fr: Titre de l'image en français
 ```
 The title will be displayed under the image and fullscreen in lightbox. You can specify a different title for lightbox (or a title to display only in lightbox) using the `title_lightbox` key.
+⚠ For lightbox to support displaying titles, you'll have to set the following in your `config/featherlight.yaml` file:
+```yaml
+initTemplate: theme://plugins/featherlight.init.js
+```
 
 
 ### Special pages and media
