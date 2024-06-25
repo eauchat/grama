@@ -13,6 +13,12 @@
      * Another bugfix -->
 
 
+# v0.5.3
+## 2024-06-25
+
+1. [](#improved)
+    * Added missing piece of documentation for lightbox images titles to work.
+
 # v0.5.2
 ## 2024-06-25
 
