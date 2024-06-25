@@ -13,6 +13,12 @@
      * Another bugfix -->
 
 
+# v0.5.2
+## 2024-06-25
+
+1. [](#new)
+    * Can now add titles to images in gallery and lightbox.
+
 # v0.5.1
 ## 2024-06-22
 
